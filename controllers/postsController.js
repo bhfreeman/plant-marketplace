@@ -15,6 +15,8 @@ module.exports = {
   },
   create: function(req, res) {
     db.Post.create(req.body)
+    //possible need this line of code below to link sales posts to the user
+     .then(({_id}) => db.User.findOneAndUpdate({}, { $push: { posts: _id } }, { new: true }))
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
