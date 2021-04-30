@@ -1,14 +1,11 @@
 import React from 'react'
 
-function HomePageLogin() {
+function SearchPage() {
     return (
         <div>
-
-
-
-
+            
         </div>
     )
 }
 
-export default HomePageLogin; 
+export default SearchPage
