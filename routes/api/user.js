@@ -12,8 +12,6 @@ router
     .route('/:id')
     .get(userController.findById)
     // Update user, to add favorites
-    .put(userController.update)
-    // Delete users favorites
-    .delete(userController.remove);
+    .put(userController.update);
 
 module.exports = router;
