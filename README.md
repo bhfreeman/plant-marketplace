@@ -12,7 +12,9 @@
 
 
 ## Role Breakdown
-
+Brett
+Kyle
+Emily
 
 ## Schedule
 
@@ -23,4 +25,5 @@
 
 ## Wireframe
 
-![plant-marketplace](./images/plant.jpg)
+![plant-marketplace](client/src/images/plant.jpg)
+![plant-marketplace](client/src/images/wireframe.jpg)
