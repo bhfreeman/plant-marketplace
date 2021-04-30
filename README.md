@@ -42,4 +42,8 @@ Using Github projects
 ## Wireframe
 
 ![plant-marketplace](client/src/images/plant.jpg)
-![plant-marketplace](client/src/images/wireframe.jpg)
+![plant-marketplace](client/src/images/wireframe.jpg)  
+
+## Dataflow  
+
+![data-flow](client/src/images/data-flow.png)
