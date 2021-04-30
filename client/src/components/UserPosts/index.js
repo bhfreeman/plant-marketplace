@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { ListItem, List } from "../List";
 import DeleteBtn from "../DeleteBtn";
 import { Link } from "react-router-dom";
-import { useStoreContext } from "../../utils/GlobalState";
-import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
+// import { useStoreContext } from "../../utils/GlobalState";
+// import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 
 function PostsList() {
