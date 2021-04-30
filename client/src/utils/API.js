@@ -13,8 +13,18 @@ export default {
   deletePost: function(id) {
     return axios.delete("/api/posts/" + id);
   },
+  // Update post with the given id
+  updatePost: function(id) {
+    return axios.update("/api/posts/" + id);
+  },
   // Saves a post to the database
   savePost: function(postData) {
     return axios.post("/api/posts", postData);
-  }
+  },
+
+  // @ToDo finish get for trefle API
+  // Find Plant by Common Name via trefle.io web API
+  // searchCommonNamePlants: function(commonName) {
+  //   return axios.get(``)
+  // }
 };
