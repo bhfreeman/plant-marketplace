@@ -8,8 +8,8 @@ function Footer() {
     <footer className="footer">
   <div class="content has-text-centered">
     <p>
-      <strong>Re-Potted</strong> by <a href="https://jgthms.com">Brett, Kyle and Emily, 2021</a>
-      <a href="#">Github</a>
+      <strong>Re-Potted</strong>by Brett, Kyle and Emily, 2021/<a href="#">Github</a>
+      <p>Images found on Unsplash</p>
     </p>
   </div>
 </footer>  

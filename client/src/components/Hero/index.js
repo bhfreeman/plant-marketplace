@@ -19,7 +19,7 @@ function Hero() {
         <img src= "/Users/emilydobson/bootcamp/homework/plant-marketplace/client/src/images/hero.jpg" 
         alt= "cactus on dark background"/>
         </figure>
-      <h1 class="title has-text-white" style= {{textAlign: "right", }}>
+      <h1 class="title has-text-white" style= {{textAlign: "center", }}>
        Repotted
       </h1>
       <h2 class="subtitle has-text-white">
