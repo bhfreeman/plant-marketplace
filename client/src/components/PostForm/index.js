@@ -1,6 +1,6 @@
 import React from 'react'
-
-function index() {
+// is this the plant card?
+function PostForm() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function index() {
     )
 }
 
-export default index
+export default PostForm;
