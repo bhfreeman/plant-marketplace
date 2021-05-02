@@ -22,14 +22,13 @@ function SearchByPlant() {
               <a class="navbar-item"></a>
               <a class="navbar-item">Jobs</a>
               <a class="navbar-item">Contact</a>
-              <hr class="navbar-divider">
-                <a class="navbar-item">Report an issue</a>
+              <a class="navbar-item">Report an issue</a>
               </div>
             </div>
           </div>
-        </div>
       </nav>
     </section>
+
   );
 }
 
