@@ -44,7 +44,6 @@ function Nav() {
           </p>
         </div>
       </div>
-      </div>
     </nav>
 
   );
