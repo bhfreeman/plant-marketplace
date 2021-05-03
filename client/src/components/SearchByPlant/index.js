@@ -20,12 +20,12 @@ function SearchByPlant() {
             <a class="navbar-link">Plants</a>
             <div class="navbar-dropdown">
               <a class="navbar-item"></a>
-              <a class="navbar-item">Bromeliads</a>
-              <a class="navbar-item">Calathea</a>
-              <a class="navbar-item">Dracaena</a>
-              <a class="navbar-item">Figus</a>
-              <a class="navbar-item">Orchids</a> 
-               <a class="navbar-item">Peperomia</a>
+              <a class="navbar-item">Flowering Plants</a>
+              <a class="navbar-item">Foliage Type</a>
+              <a class="navbar-item">Succulents and Cacti</a>
+              <a class="navbar-item">Vegetables</a>
+              <a class="navbar-item">Seeds</a> 
+              <a class="navbar-item">Trees</a>
             </div>
           </div>
         </div>

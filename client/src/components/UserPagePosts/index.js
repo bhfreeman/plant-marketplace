@@ -16,7 +16,6 @@ function UserPagePosts() {
             <div className="media-content">
               <p className="title is-4">
                 {}
-                <button class="delete"></button>
                 <input
                   class="input is-primary"
                   type="text"
@@ -25,7 +24,7 @@ function UserPagePosts() {
               </p>
               <p className="subtitle is-6">
                 {}
-                <button class="delete"></button>
+         
                 <input
                   class="input is-primary"
                   type="text"
@@ -39,7 +38,6 @@ function UserPagePosts() {
               >
                 {}
               </textarea>
-              <button class="delete"></button>
             </div>
             <div className="content">
               <p className="is-size-6">{}</p>
