@@ -9,7 +9,7 @@ function CloudinaryTest() {
     const uploadOptions = {
       cloudName: "repotted",
       tags: [tag, "anImage"],
-      uploadPreset: "upload",
+      uploadPreset: "upload_unsigned",
     };
     openUploadWidget(uploadOptions, (error, photos) => {
       if (!error) {
