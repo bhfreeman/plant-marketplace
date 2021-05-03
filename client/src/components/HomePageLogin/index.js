@@ -15,7 +15,7 @@ function HomePageLogin() {
         <div
           style={{
             width: "300px",
-            border: "10px solid green",
+            border: "5px solid green",
             padding: "50px",
             margin: "20px",
           }}
