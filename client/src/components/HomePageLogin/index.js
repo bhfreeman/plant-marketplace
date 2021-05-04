@@ -1,4 +1,5 @@
 import React from "react";
+import { Link} from 'react-router-dom'
 
 //we need to add bulma react as a dependency
 function HomePageLogin() {
@@ -20,10 +21,10 @@ function HomePageLogin() {
             margin: "20px",
           }}
         >
-          <a className="button is-success">Login/Signup</a>
+          <Link to="/" className="button is-success">Login/Signup</Link>
           <br>
          </br>
-              <a className="button is-success">Browse</a>
+         <Link to="/search" className="button is-success">Browse</Link>
             </div>
           </div>
     </section>
