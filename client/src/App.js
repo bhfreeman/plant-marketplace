@@ -13,10 +13,10 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <StoreProvider>
-          <CloudinaryContext cloudName="repotted">
+    <StoreProvider>
+      <CloudinaryContext cloudName="repotted">
+        <Router>
+          <div>
             <Nav />
             <Switch>
               <Route exact path="/" component={LandingPg} />
@@ -25,10 +25,10 @@ function App() {
               <Route exact path="/login-signup" component={Login} />
             </Switch>
             <Footer />
-          </CloudinaryContext>
-        </StoreProvider>
-      </div>
-    </Router>
+          </div>
+        </Router>
+      </CloudinaryContext>
+    </StoreProvider>
   );
 }
 
