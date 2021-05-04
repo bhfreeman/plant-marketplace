@@ -1,5 +1,6 @@
 import React from "react";
 import UserInfo from "../components/UserInfo";
+import UserPagePosts from '../components/UserPagePosts'
 import CreatePostForm from "../components/CreatePostForm";
 
 

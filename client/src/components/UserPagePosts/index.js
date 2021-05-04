@@ -1,6 +1,6 @@
 import React from "react";
 // user can update their posts on here. Need delete and update functions.
-function UserPagePosts() {
+function UserPagePosts({img,title,plant,description,email,content}) {
   return (
     <section className="container-fluid">
       <p className="title" style={{}}>
@@ -11,11 +11,11 @@ function UserPagePosts() {
         <div className="column" style={{}}>
           <div className="card" style={{}}>
             <div className="card-image">
-              <img className="image" src={} alt={} />
+              <img className="image" src={img} alt={title} />
             </div>
             <div className="media-content">
               <p className="title is-4">
-                {}
+                {title}
                 <input
                   class="input is-primary"
                   type="text"
@@ -23,7 +23,7 @@ function UserPagePosts() {
                 />
               </p>
               <p className="subtitle is-6">
-                {}
+                {plant}
          
                 <input
                   class="input is-primary"
@@ -36,12 +36,12 @@ function UserPagePosts() {
                 placeholder="description update"
                 rows="10"
               >
-                {}
+                {description}
               </textarea>
             </div>
             <div className="content">
-              <p className="is-size-6">{}</p>
-              <a href={}>Contact email</a>
+              <p className="is-size-6">{content}</p>
+              <a href={email}>Contact email</a>
             </div>
             <button class="button is-success">Update</button>
             <button class="button is-danger">Delete ALL</button>

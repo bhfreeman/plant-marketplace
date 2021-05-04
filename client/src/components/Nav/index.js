@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 // import { useStoreContext } from "../../utils/GlobalState";
 
 function Nav() {
@@ -14,7 +15,7 @@ function Nav() {
         className="navbar-item">
      Repotted
         </Link>
-        <a
+        {/* <a
           role="button"
           className="navbar-burger burger"
           aria-label="menu"
@@ -25,7 +26,7 @@ function Nav() {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </a> */}
       </div>
       <div id="navbarBasic" className="navbar-menu">
         <div className="navbar-start">
@@ -41,17 +42,16 @@ function Nav() {
           >
         Login
           </Link>
-          <Link to="/notes" className="navbar-item" 
+          <Link to="/login-signup" className="navbar-item" 
           style={{ color: "black" , fontSize: "18px" }}onClick={toggleBurgerMenu}>
           Signup
           </Link>
-          <a
+          <Link to= "/contact"
            style={{ color: "black", fontSize: "18px" }}
-            // href="../../../public/images/resume_pdf.pdf"
             className="navbar-item"
           >
           Contact
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

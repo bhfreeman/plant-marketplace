@@ -5,9 +5,9 @@ function SearchByPlant() {
     <section>
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar">
-          <a class="navbar-item">
+          <span class="navbar-item">
             <strong>Search by plant</strong>
-          </a>
+          </span>
           <p class="subtitle is-5 text-center" />
           <div class="field has-addons">
             <p class="control" />
@@ -16,17 +16,30 @@ function SearchByPlant() {
               <button class="button is-primary">Search</button>
             </p>
           </div>
-          <div class="navbar-item has-dropdown is-hoverable">
+          {/* <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">Plants</a>
             <div class="navbar-dropdown">
-              <a class="navbar-item"></a>
-              <a class="navbar-item">Flowering Plants</a>
-              <a class="navbar-item">Foliage Type</a>
-              <a class="navbar-item">Succulents and Cacti</a>
-              <a class="navbar-item">Vegetables</a>
-              <a class="navbar-item">Seeds</a> 
-              <a class="navbar-item">Trees</a>
+              <ul>
+              <li class="navbar-item"></li>
+              <li class="navbar-item">Flowering Plants</li>
+              <li class="navbar-item">Foliage Type</li>
+              <li class="navbar-item">Succulents and Cacti</li>
+              <li class="navbar-item">Vegetables</li>
+              <li class="navbar-item">Seeds</li> 
+              <li class="navbar-item">Trees</li>
+              </ul>
             </div>
+          </div> */}
+          <div className="select is-primary">
+            <select className="is-hovered" name="Plants">
+              <option>Select Plant Type</option>
+              <option >Flowering Plants</option>
+              <option >Foliage Type</option>
+              <option >Succulents and Cacti</option>
+              <option >Vegetables</option>
+              <option >Seeds</option> 
+              <option >Trees</option>
+            </select>
           </div>
         </div>
       </nav>
