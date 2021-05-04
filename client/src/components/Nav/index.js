@@ -3,50 +3,61 @@ import React from "react";
 
 function Nav() {
   // const [store] = useStoreContext();
-
+  function toggleBurgerMenu() {
+    document.querySelector(".navbar-menu").classList.toggle("is-active");
+  }
   return (
-    //name of App needs to go to center!
-    <nav class="navbar is-transparent">
-        <a class="navbar-item" href="#"></a>
-        <div
-          class="navbar-burger burger"
-          data-target="navbarExampleTransparentExample"
+    <nav className="navbar" style={{ background: "#caa677"}}
+    role="navigation" aria-label="main navigation">
+      <div className="navbar-brand">
+        <Link to="/"  style={{ fontSize:"30px", color: "black" }}
+        className="navbar-item">
+     Repotted
+        </Link>
+        <a
+          role="button"
+          className="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasic"
+          onClick={toggleBurgerMenu}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
-
-      <div id="navbarExampleTransparentExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item"></a>
-          <h1 class="title"style ={{fontSize: "30px", color: "black"}}>Repotted</h1>
-          <div className="buttons">
-            <a className="button is-success">
-              <strong>Log in</strong>
-            </a>
-            <a class="button is-success">
-              <strong>View account</strong>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="navbar-end">
-        <div class="navbar-item">
-          {/* <div class="field is-grouped"> */}
-          <p class="control">
-            <div className="navbar-end">
-              <div className="navbar-item">
-                <a href="#">Home</a>
-              </div>
-            </div>
-          </p>
+      <div id="navbarBasic" className="navbar-menu">
+        <div className="navbar-start">
+          <Link to="/about" className="navbar-item" 
+           style={{ color:  "black" , fontSize: "18px" }}onClick={toggleBurgerMenu}>
+            About
+          </Link>
+          <Link
+            to="/contact"
+            style={{ color: "black" , fontSize: "18px" }}
+            className="navbar-item"
+            onClick={toggleBurgerMenu}
+          >
+        Login
+          </Link>
+          <Link to="/notes" className="navbar-item" 
+          style={{ color: "black" , fontSize: "18px" }}onClick={toggleBurgerMenu}>
+          Signup
+          </Link>
+          <a
+           style={{ color: "black", fontSize: "18px" }}
+            // href="../../../public/images/resume_pdf.pdf"
+            className="navbar-item"
+          >
+          Contact
+          </a>
         </div>
       </div>
     </nav>
 
-  );
-}
+  )
+  
+}; 
 
 export default Nav;
