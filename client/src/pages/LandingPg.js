@@ -1,40 +1,22 @@
-import React from 'react'
-import HomePageLogin from '../components/HomePageLogin'
-import Footer from "./components/Footer"
-import HomePageLogin from "./components/HomePageLogin"
-import Nav from "./components/Navbar"
+import React from "react";
+import Hero from "../components/Hero";
+import HomePagePosts from "../components/HomePagePosts";
+import HomePageLogin from "../components/HomePageLogin";
+import exampleData from "../examples.json";
 
-// need to add the API call for the browsing function? 
-//or are they just looking at posts?
-class LandingPg extends Component{
-// state={
-
-
-// }
-
-handleInputChange= event =>{
-    this.setState({ search: event.target.value})
+function LandingPg() {
+  return (
+    <div>
+      <Hero />
+      {/* map over the example data to create multiple example posts, pass in each item in the example data as props. */}
+      <div className="home-page">
+        {exampleData.map((item) => (
+          <HomePagePosts key={item.id} {...item} />
+        ))}
+        <HomePageLogin />
+      </div>
+    </div>
+  );
 }
 
-// function for the submit button
-handleFormSubmit = event=>{
-    event.preventDefault();
-    this.search()
-    
-    }
-render() {
-    return (
-        <div>
-            <Nav/> 
-            <HomePagePosts/>
-            <HomePageLogin
-             handleInputChange={this.handleInputChange}
-             handleFormSubmit= {this.handleFormSubmit}
-            //  search={this.state.search}
-             />
-          <Footer/>
-        </div>
-    )
-}
-}
-export default LandingPg; 
+export default LandingPg;

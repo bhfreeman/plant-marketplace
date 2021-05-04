@@ -17,6 +17,12 @@ router
     // Update user, to add favorites
     .put(userController.update);
 
+router
+    .route("/login")
+    .post(userController.login);
 
+router
+    .route("/logout")
+    .post(userController.logout);
 
 module.exports = router;
