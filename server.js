@@ -19,7 +19,9 @@ app.use(session({
   secret: "Secret Secret",
   resave: false,
   saveUninitialized: false,
-  store: new MongoStore({ mongooseConnection: mongoose.connection })
+  store: MongoStore.create({
+    mongoUrl: "mongodb://localhost/repotteddb"
+  })
 }))
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

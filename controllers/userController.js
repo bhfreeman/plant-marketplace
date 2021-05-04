@@ -23,7 +23,7 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
-  login: function async (req,res) {
+  login: async (req,res) => {
     try{
       const userData = await db.User.find({email: req.body.email});
       if(!userData) {
