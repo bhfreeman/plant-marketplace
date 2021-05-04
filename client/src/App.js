@@ -17,15 +17,14 @@ function App() {
       <CloudinaryContext cloudName="repotted">
         <Router>
           <div>
-
-          <Nav />
-          <Switch>
-            <Route exact path="/" component={LandingPg} />
-            <Route exact path="/search" component={SearchPage} />
-            <Route exact path="/account-page" component={UserAccountPage} />
-            <Route exact path="/login-signup" component={Login} />
-          </Switch>
-          <Footer />
+            <Nav />
+            <Switch>
+              <Route exact path="/" component={LandingPg} />
+              <Route exact path="/search" component={SearchPage} />
+              <Route exact path="/account-page" component={UserAccountPage} />
+              <Route exact path="/login-signup" component={Login} />
+            </Switch>
+            <Footer />
           </div>
         </Router>
       </CloudinaryContext>
