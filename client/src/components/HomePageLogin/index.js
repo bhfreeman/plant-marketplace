@@ -21,17 +21,17 @@ const  HomePageLogin=(props)=>{
             margin: "20px",
           }}
         >
-          <a className="button is-success"
-          onChange={props.handleInputChange}
-          value={props.loginSignup}
+          <Link to="/login-signup" className="button is-success"
+          // onChange={props.handleInputChange}
+          // value={props.loginSignup}
           >Login/Signup
-            </a>
+            </Link>
           <br>
          </br>
-              <a className="button is-success"
-              onChange={props.handleInputChange}
-              value={props.browse}
-              >Browse</a>
+              <Link to="/search" className="button is-success"
+              // onChange={props.handleInputChange}
+              // value={props.browse}
+              >Browse</Link>
             </div>
           </div>
     </section>
