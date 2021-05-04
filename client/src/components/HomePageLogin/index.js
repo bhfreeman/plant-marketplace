@@ -2,7 +2,7 @@ import React from "react";
 import { Link} from 'react-router-dom'
 
 //we need to add bulma react as a dependency
-function HomePageLogin() {
+const  HomePageLogin=(props)=>{
   return (
     <section className="container-fluid">
       <div>
@@ -21,10 +21,17 @@ function HomePageLogin() {
             margin: "20px",
           }}
         >
-          <Link to="/" className="button is-success">Login/Signup</Link>
+          <a className="button is-success"
+          onChange={props.handleInputChange}
+          value={props.loginSignup}
+          >Login/Signup
+            </a>
           <br>
          </br>
-         <Link to="/search" className="button is-success">Browse</Link>
+              <a className="button is-success"
+              onChange={props.handleInputChange}
+              value={props.browse}
+              >Browse</a>
             </div>
           </div>
     </section>
