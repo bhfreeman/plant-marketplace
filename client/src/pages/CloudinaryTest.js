@@ -8,8 +8,8 @@ function CloudinaryTest() {
   const beginUpload = (tag) => {
     const uploadOptions = {
       cloudName: "repotted",
-      tags: [tag, "anImage"],
-      uploadPreset: "upload_unsigned",
+      tags: [tag, `${userName}_${saleItemName}`],
+      uploadPreset: "unsigned_upload",
     };
     openUploadWidget(uploadOptions, (error, photos) => {
       if (!error) {
@@ -24,7 +24,7 @@ function CloudinaryTest() {
   };
 
   useEffect(() => {
-    fetchPhotos("image", setImages);
+    fetchPhotos(`${userName}_${saleItemName}`, setImages);
   }, []);
   return (
     <div>
