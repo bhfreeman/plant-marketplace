@@ -1,21 +1,36 @@
 import React from "react";
 
-function LoginForm() {
+
+
+
+const LoginForm=(props)=>{
   return (
     <section>
-      <div class="field">
-        <p class="control has-icons-left has-icons-right">
-          <input class="input" type="userName" placeholder="userName" />
+      <div className="field">
+        <p className="control has-icons-left has-icons-right">
+          <input className="input" 
+          value={props.userName}
+          onChange={props.handleInputChange}
+          type="userName" 
+          placeholder="userName" />
         </p>
       </div>
-      <div class="field">
-        <p class="control has-icons-left">
-          <input class="input" type="password" placeholder="Password" />
+      <div className="field">
+        <p className="control has-icons-left">
+          <input className="input" 
+          type="password"
+          value= {props.password}
+          onChange={props.handleInputChange} 
+          placeholder="Password" />
         </p>
       </div>
-      <div class="field">
-        <p class="control">
-          <button class="button is-success is-inverted">Login</button>
+      <div className="field">
+        <p className="control">
+          <button className="button is-success is-inverted"
+          onClick= {props.handleFormSubmit}
+          >
+            Login
+            </button>
         </p>
       </div>
     </section>
