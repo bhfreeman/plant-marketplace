@@ -28,7 +28,7 @@ const  HomePageLogin=(props)=>{
             </Link>
           <br>
          </br>
-              <Link to="/login-signup" className="button is-success"
+              <Link to="/search" className="button is-success"
               // onChange={props.handleInputChange}
               // value={props.browse}
               >Browse</Link>
