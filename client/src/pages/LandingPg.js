@@ -11,6 +11,7 @@ class LandingPg extends Component{
 
 
 // }
+
 handleInputChange= event =>{
     this.setState({ search: event.target.value})
 }
