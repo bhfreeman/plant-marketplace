@@ -3,30 +3,30 @@ import React from "react";
 function SearchByPlant() {
   return (
     <section>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar">
-          <span class="navbar-item">
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="navbar">
+          <span className="navbar-item">
             <strong>Search by plant</strong>
           </span>
-          <p class="subtitle is-5 text-center" />
-          <div class="field has-addons">
-            <p class="control" />
-            <input class="input" type="text" placeholder="Find a plant" />
-            <p class="control">
-              <button class="button is-primary">Search</button>
+          <p className="subtitle is-5 text-center" />
+          <div className="field has-addons">
+            <p className="control" />
+            <input className="input" type="text" placeholder="Find a plant" />
+            <p className="control">
+              <button className="button is-primary">Search</button>
             </p>
           </div>
-          {/* <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">Plants</a>
-            <div class="navbar-dropdown">
+          {/* <div className="navbar-item has-dropdown is-hoverable">
+            <a className="navbar-link">Plants</a>
+            <div className="navbar-dropdown">
               <ul>
-              <li class="navbar-item"></li>
-              <li class="navbar-item">Flowering Plants</li>
-              <li class="navbar-item">Foliage Type</li>
-              <li class="navbar-item">Succulents and Cacti</li>
-              <li class="navbar-item">Vegetables</li>
-              <li class="navbar-item">Seeds</li> 
-              <li class="navbar-item">Trees</li>
+              <li className="navbar-item"></li>
+              <li className="navbar-item">Flowering Plants</li>
+              <li className="navbar-item">Foliage Type</li>
+              <li className="navbar-item">Succulents and Cacti</li>
+              <li className="navbar-item">Vegetables</li>
+              <li className="navbar-item">Seeds</li> 
+              <li className="navbar-item">Trees</li>
               </ul>
             </div>
           </div> */}

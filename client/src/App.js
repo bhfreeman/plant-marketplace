@@ -14,7 +14,6 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
-      <div>
         <StoreProvider>
           <CloudinaryContext cloudName="repotted">
             <Nav />
@@ -27,7 +26,6 @@ function App() {
             <Footer />
           </CloudinaryContext>
         </StoreProvider>
-      </div>
     </Router>
   );
 }

@@ -35,7 +35,7 @@ function Nav() {
             About
           </Link>
           <Link
-            to="/contact"
+            to="/login-signup"
             style={{ color: "black" , fontSize: "18px" }}
             className="navbar-item"
             onClick={toggleBurgerMenu}

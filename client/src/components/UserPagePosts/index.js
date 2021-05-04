@@ -17,7 +17,7 @@ function UserPagePosts({img,title,plant,description,email,content}) {
               <p className="title is-4">
                 {title}
                 <input
-                  class="input is-primary"
+                  className="input is-primary"
                   type="text"
                   placeholder="Update Title"
                 />
@@ -26,13 +26,13 @@ function UserPagePosts({img,title,plant,description,email,content}) {
                 {plant}
          
                 <input
-                  class="input is-primary"
+                  className="input is-primary"
                   type="text"
                   placeholder="Update Plant Name"
                 />
               </p>
               <textarea
-                class="textarea"
+                className="textarea"
                 placeholder="description update"
                 rows="10"
               >
@@ -43,8 +43,8 @@ function UserPagePosts({img,title,plant,description,email,content}) {
               <p className="is-size-6">{content}</p>
               <a href={email}>Contact email</a>
             </div>
-            <button class="button is-success">Update</button>
-            <button class="button is-danger">Delete ALL</button>
+            <button className="button is-success">Update</button>
+            <button className="button is-danger">Delete ALL</button>
           </div>
         </div>
       </div>

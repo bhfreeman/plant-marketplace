@@ -7,10 +7,10 @@ import React from "react";
 
 function Hero() {
   return (
-    <div class="container">
-    <section class="hero">
-    <div class="hero-body">
-      <figure class= "background image" style= {{backgroundImage: "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5))",  
+    <div className="container">
+    <section className="hero">
+    <div className="hero-body">
+      <figure className= "background image" style= {{backgroundImage: "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5))",  
        backgroundPosition: "center", 
        backgroundRepeat: "noRepeat",
        backgroundSize: "cover",  
@@ -19,10 +19,10 @@ function Hero() {
         <img src= "/images/hero.jpg" 
         alt= "cactus on dark background"/>
         </figure>
-      <h1 class="title has-text-white" style= {{textAlign: "center", fontSize: "40px"}}>
+      <h1 className="title has-text-white" style= {{textAlign: "center", fontSize: "40px"}}>
        Repotted
       </h1>
-      <h2 class="subtitle has-text-white">
+      <h2 className="subtitle has-text-white">
        Welcome to a plant marketplace
       </h2>
     </div>

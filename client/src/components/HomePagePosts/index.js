@@ -7,9 +7,9 @@ function HomePagePosts({plant_name, image_link, description, contact_email}) {
   return (
     <div className="box">
   <article className="media">
-    <div class="media-left">
-      <figure class="image is-64x64">
-        <img src={image_link}alt="Image"/>
+    <div className="media-left">
+      <figure className="image is-64x64">
+        <img src={image_link}alt="add description here"/>
       </figure>
     </div>
     <div className="media-content">
