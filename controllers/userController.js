@@ -8,6 +8,7 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
+// Add a new user
   create: async function (req, res) {
     try {
       const newUser = new db.User(req.body);
@@ -23,25 +24,26 @@ module.exports = {
     //   .then((dbModel) => res.json(dbModel))
     //   .catch((err) => res.status(422).json(err));
   },
+  //Find a specific user by the id
   findById: function (req, res) {
     db.User.findById(req.params.id)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
+  //Update a specific user
   update: function (req, res) {
     db.User.findOneAndUpdate({ _id: req.params.id }, req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
+  //Login a user from the email provided
   login: async (req, res) => {
     try {
       const userData = await db.User.findOne({ email: req.body.email });
-      console.log(userData);
       if (!userData) {
         res.send("Incorrect email, please enter a correct email.");
       }
       const validPassword = await userData.comparePassword(req.body.password);
-      console.log(validPassword);
       if (!validPassword) {
         res.send("Incorrect password, please re-enter password.");
       } else {
@@ -63,12 +65,12 @@ module.exports = {
           });
         });
       }
-      console.log(req.session);
     } catch (err) {
       console.log(err);
       res.json(err);
     }
   },
+  //Logout the user and destroy the session
   logout: function (req, res) {
     if (req.session.loggedIn) {
       req.session.destroy(() => {
