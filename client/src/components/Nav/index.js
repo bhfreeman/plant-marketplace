@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from 'react-router-dom'
 // import { useStoreContext } from "../../utils/GlobalState";
 
-function Nav() {
+function Nav({loggedIn}) {
   // const [store] = useStoreContext();
   function toggleBurgerMenu() {
     document.querySelector(".navbar-menu").classList.toggle("is-active");
@@ -34,18 +34,19 @@ function Nav() {
            style={{ color:  "black" , fontSize: "18px" }}onClick={toggleBurgerMenu}>
             About
           </Link>
-          <Link
+          {!loggedIn &&           <Link
             to="/login-signup"
             style={{ color: "black" , fontSize: "18px" }}
             className="navbar-item"
             onClick={toggleBurgerMenu}
           >
-        Login
-          </Link>
-          <Link to="/login-signup" className="navbar-item" 
+        Login/Signup
+          </Link> }
+
+          {/* <Link to="/login-signup" className="navbar-item" 
           style={{ color: "black" , fontSize: "18px" }}onClick={toggleBurgerMenu}>
           Signup
-          </Link>
+          </Link> */}
           <Link to= "/contact"
            style={{ color: "black", fontSize: "18px" }}
             className="navbar-item"
@@ -53,6 +54,12 @@ function Nav() {
           Contact
           </Link>
         </div>
+        {loggedIn && <div className="navbar-end">
+          <button className="navbar-item" >
+            Logout
+          </button>
+        </div> }
+
       </div>
     </nav>
 
