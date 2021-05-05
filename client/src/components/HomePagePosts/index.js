@@ -5,6 +5,7 @@ import React from "react";
 // passing in props from LandingPg.js
 function HomePagePosts({ plant_name, image_link, description, contact_email }) {
   return (
+    // flex box with margin and padding so two can fit side by side
     <div className="column is-half">
       <div className="card-image ">
         <figure class="image is-4by3">
