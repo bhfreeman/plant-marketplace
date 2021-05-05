@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 import SignupForm from "../components/SignupForm";
 import LoginForm from "../components/LoginForm";
+import API from "../utils/API";
 
 function Login() {
-  const [userName, setuserName] = useState('')
-  const [userPassword, setUserPassword] = useState('')
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  function handleLogin() {
-
+  async function handleLogin() {
+    const apicall= await API.login({
+      email,
+      password,
+    });
+    console.log(apicall)
   }
 
-  function handleSignup(){
-    
-  }
+  function handleSignup() {}
+
+  function handleInputChange() {}
 
   return (
     <div className="login-signup-page">
@@ -20,7 +25,13 @@ function Login() {
         <SignupForm />
       </div>
       <div className="login">
-        <LoginForm />
+        <LoginForm
+          email={email}
+          password={password}
+          setEmail={setEmail}
+          setPassword={setPassword}
+          handleLogin={handleLogin}
+        />
       </div>
     </div>
   );
