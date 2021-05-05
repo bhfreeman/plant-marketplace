@@ -9,7 +9,9 @@ function Hero() {
       <section className="hero">
         <div
           class="hero-body"
-          style={{ width: "100%", padding: 0, margin: "0%",position:"relative" }}
+          style={{ width: "100%",
+           padding: 0, margin: "0%",
+            position:"relative" }}
         >
 
           {/* @ToDo work on gradient. Get background image size to fit a larger monitor */}
