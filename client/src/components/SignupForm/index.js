@@ -4,17 +4,37 @@ function SignUpForm() {
     return (
         <div>
         <h1 style={{fontSize: "18px"}}> Signup Form</h1>
+   <input className=
+   "input is-success" 
+   type="text" 
+   style= {{ width: "50%"}}
+   placeholder="Name"/>
+
    <input className="input is-success" 
-   type="text" placeholder="Name"/>
+   type="text" 
+   style= {{ width: "50%"}}
+   placeholder="UserName"/>
+
    <input className="input is-success" 
-   type="text" placeholder="UserName"/>
+   type="text" 
+   style= {{ width: "50%"}}
+   placeholder="email"/>
+
    <input className="input is-success" 
-   type="text" placeholder="email"/>
+   type="text" 
+   style= {{ width: "50%"}}
+   placeholder="Password"/>
+
    <input className="input is-success" 
-   type="text" placeholder="Password"/>
-   <input className="input is-success" 
-   type="text" placeholder="City"/>
-  <button className="button is-success">Success</button>
+   type="text"
+   style= {{ width: "50%"}}
+    placeholder="City"/>
+
+  <button className="button is-success"
+  style={{position:"absolute",
+  top: "10px",
+  left:10}}
+  >Success</button>
         </div>
     )
 }
