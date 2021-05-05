@@ -11,7 +11,9 @@ function SearchLocationForm() {
           <p className="subtitle is-5 text-center" />
           <div className="field has-addons">
             <p className="control" />
-            <input className="input" type="text" placeholder="Enter your city" />
+            <input className="input" type="text"
+             style= {{ width: "50%"}}
+             placeholder="Enter your city" />
             <p className="control">
               <button className="button is-primary">Search</button>
             </p>
