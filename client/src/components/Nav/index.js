@@ -34,6 +34,10 @@ function Nav() {
            style={{ color:  "black" , fontSize: "18px" }}onClick={toggleBurgerMenu}>
             About
           </Link>
+          <Link to="/search" className="navbar-item" 
+           style={{ color:  "black" , fontSize: "18px" }}onClick={toggleBurgerMenu}>
+            Browse Plants
+          </Link>
           <Link
             to="/login-signup"
             style={{ color: "black" , fontSize: "18px" }}
