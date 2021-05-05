@@ -10,10 +10,10 @@ function LandingPg() {
       <Hero />
       {/* map over the example data to create multiple example posts, pass in each item in the example data as props. */}
       <div className="home-page columns">
-        <div className="home-page-posts column is-half is-5"
+        <div className="home-page-posts column is-half is-5 is-flex is-flex-wrap-wrap is-justify-content-space-around"
         style={{borderRight:"solid", margin:"50px"}}>
         {exampleData.map((item) => (
-          <HomePagePosts key={item.id} {...item}  className="card columns "/>
+          <HomePagePosts key={item.id} {...item}  className="card  "/>
         ))}
 
         </div>
