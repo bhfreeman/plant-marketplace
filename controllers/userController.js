@@ -45,7 +45,7 @@ module.exports = {
       }
       const validPassword = await userData.comparePassword(req.body.password);
       if (!validPassword) {
-        res.send("Incorrect password, please re-enter password.");
+        res.status(401).send({message:"Incorrect password, please re-enter password."});
       } else {
         req.session.save(() => {
           req.session.userID = userData.id;

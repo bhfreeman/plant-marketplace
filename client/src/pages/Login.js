@@ -3,16 +3,22 @@ import SignupForm from "../components/SignupForm";
 import LoginForm from "../components/LoginForm";
 import API from "../utils/API";
 
-function Login() {
+function Login({userId, setUserId, loggedIn, setLoggedIn}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   async function handleLogin() {
-    const apicall= await API.login({
-      email,
-      password,
-    });
-    console.log(apicall)
+    try{
+      const apicall= await API.login({
+        email,
+        password,
+      });
+      setUserId(apicall.data.user.id)
+      setLoggedIn(apicall.data.loggedIn)
+
+    } catch(err) {
+      alert(err)
+    }
   }
 
   function handleSignup() {}
