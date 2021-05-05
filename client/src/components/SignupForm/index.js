@@ -20,3 +20,5 @@ function SignUpForm() {
 }
 
 export default SignUpForm; 
+
+//  style= {{ width: "50%"}} to constain the input form
