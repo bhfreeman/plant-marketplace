@@ -3,31 +3,29 @@ import React from "react";
 //used a box to give it a bit of emphasis
 
 // passing in props from LandingPg.js
-function HomePagePosts({plant_name, image_link, description, contact_email}) {
+function HomePagePosts({ plant_name, image_link, description, contact_email }) {
   return (
-    <div className="box">
-  <article className="media">
-
-    <div class="media-left">
-      <figure class="image is-64x64">
-        <img src={image_link}alt="Image"/>
-
-      </figure>
-    </div>
-    <div className="media-content">
-      <div className="content">
-        <p>
-          <strong>Title: {plant_name}</strong> 
-          <br></br>
-          Description: {description}</p>
+    // flex box with margin and padding so two can fit side by side
+    <div className="column is-half">
+      <div className="card-image ">
+        <figure class="image is-4by3">
+          <img src={image_link} alt="Image" />
+        </figure>
+      </div>
+      <div className="media-content">
         <div className="content">
-        <p className="is-size-6">{}</p>
-        <a href={contact_email}>Contact email</a>
-           </div>
+          <p>
+            <strong><em>Plant Name: </em>{plant_name}</strong>
+            <br></br>
+            {description}
+          </p>
+          <div className="content">
+            <p className="is-size-6">{}</p>
+            <a href={contact_email}>Contact Seller</a>
+          </div>
+        </div>
       </div>
     </div>
-  </article>
-</div>
   );
 }
 
