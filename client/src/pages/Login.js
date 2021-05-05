@@ -3,9 +3,20 @@ import SignupForm from "../components/SignupForm";
 import LoginForm from "../components/LoginForm";
 import API from "../utils/API";
 
-function Login({userId, setUserId, loggedIn, setLoggedIn}) {
+function Login({ setUserId, setLoggedIn}) {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [newUser, setNewUser] = useState({
+    name: '',
+    username: '',
+    email: '',
+    password: '',
+    city: '',
+    state: ''
+  })
+  
 
   async function handleLogin() {
     try{
@@ -15,20 +26,38 @@ function Login({userId, setUserId, loggedIn, setLoggedIn}) {
       });
       setUserId(apicall.data.user.id)
       setLoggedIn(apicall.data.loggedIn)
-
+      window.location.replace('/')
     } catch(err) {
       alert(err)
     }
   }
 
-  function handleSignup() {}
-
-  function handleInputChange() {}
+  async function handleSignup() {
+    try{
+      const signup = await API.createUser({
+        name: newUser.name,
+        username: newUser.username,
+        email: newUser.email,
+        password: newUser.password,
+        city: newUser.city,
+        state: newUser.state
+      })
+      // const login = await API.login({
+      //   email: newUser.email,
+      //   password: newUser.password
+      // })
+      setLoggedIn(true)
+      window.location.replace('/')
+      
+    } catch(err) {
+      alert(err)
+    }
+  }
 
   return (
     <div className="login-signup-page">
       <div className="sign-up">
-        <SignupForm />
+        <SignupForm newUser={newUser} setNewUser={setNewUser} handleSignup={handleSignup}/>
       </div>
       <div className="login">
         <LoginForm

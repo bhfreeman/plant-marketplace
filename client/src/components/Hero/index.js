@@ -10,7 +10,7 @@ function Hero() {
 
   <div className="container-flex">
     <section className="hero">
-    <div class="hero-body" style={{ width:"100%",  
+    <div className="hero-body" style={{ width:"100%",  
        padding: 0, margin: "0%" }}>
     
       <figure className= "background image" style= {{backgroundImage: "linear-gradient(rgba(0,0,1,10),rgba(0,0,0,0.5))",  

@@ -8,7 +8,7 @@ function HomePagePosts({ plant_name, image_link, description, contact_email }) {
     // flex box with margin and padding so two can fit side by side
     <div className="column is-half">
       <div className="card-image ">
-        <figure class="image is-4by3">
+        <figure className="image is-4by3">
           <img src={image_link} alt="Image" />
         </figure>
       </div>
