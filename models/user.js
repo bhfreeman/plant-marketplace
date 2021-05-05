@@ -34,25 +34,44 @@ const userSchema = new Schema({
   timestamps: true
 });
 
-userSchema.pre('save', function() {
-    const user = this;
-    if(!user.isModified('password')) return next();
-    bcrypt.genSalt(10, function(err, salt) {
-        if(err) return next(err);
-        bcrypt.hash(user.password, salt, function(err, hash) {
-            if(err) return next(err);
-            user.password = hash;
-            next();
-        })
-    })
+userSchema.pre('save', async function(next) {
+    if (!this.isModified("password")) return next();
+    try {
+      const salt = await bcrypt.genSalt(10);
+      this.password = await bcrypt.hash(this.password, salt);
+      return next();
+    } catch (error) {
+      return next(error);
+    }
+    // const user = this;
+    // if(user.isModified('password') || user.isNew) {
+    //     bcrypt.genSalt(10, function (saltError, salt) {
+    //         if (saltError) {
+    //           return next(saltError)
+    //         } else {
+    //           bcrypt.hash(user.password, salt, function(hashError, hash) {
+    //             if (hashError) {
+    //               return next(hashError)
+    //             }
+    //             user.password = hash
+    //             next()
+    //           })
+    //         }
+    //       })
+    // }
+    next();
 })
 
-userSchema.methods.comparePassword = function(loginPw,cb) {
-    bcrypt.compare(loginPw, this.password, function(err, isMatch) {
-        if (err) return cb(err);
-        cb(null, isMatch)
-    })
-}
+userSchema.methods.comparePassword = async function(password) {
+  return await bcrypt.compare(password, this.password)
+  }
+
+// userSchema.methods.comparePassword = function(loginPw,cb) {
+//     bcrypt.compare(loginPw, this.password, function(err, isMatch) {
+//         if (err) return cb(err);
+//         cb(null, isMatch)
+//     })
+// }
 
 const User = mongoose.model("User", userSchema);
 
