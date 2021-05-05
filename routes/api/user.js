@@ -7,9 +7,10 @@ router
     .route('/')
     .post(userController.create);
 
-    // router
-    // .route('/all')
-    // .get(userController.findAll)
+    router
+    .route('/all')
+    .get(userController.findAll)
+    
 // Get user by id
 router
     .route('/:id')
