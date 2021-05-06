@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import API from '../../utils/API'
 
-function UserInfo({userId}) {
+function UserInfo({userId, setPosts}) {
 
   const [user, setUser] = useState({
     name:'',
@@ -15,7 +15,7 @@ function UserInfo({userId}) {
   const getUserInfo = async () => {
     try {
      let response = await API.getUserInfo(userId)
-     setUser({
+     await setUser({
        ...user,
        name: response.data.name,
        username: response.data.username,
@@ -23,6 +23,7 @@ function UserInfo({userId}) {
        city: response.data.city,
        state: response.data.state
     })
+    await setPosts(response.data.posts)
 
     } catch(err){
       console.error(err)

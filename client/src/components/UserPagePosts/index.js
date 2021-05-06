@@ -1,4 +1,5 @@
 import React from "react";
+import BaseSalesPost from '../BaseSalesPost'
 // user can update their posts on here. Need delete and update functions.
 function UserPagePosts({img,title,plant,description,email,content}) {
   return (
