@@ -5,8 +5,8 @@ import states from "../../utils/states.json";
 function SignUpForm({ newUser, setNewUser, handleSignup }) {
   return (
     <section className="container-flex">
-      <div className="columns">
-        <div className="column" style={{ textAlign: "center" }}>
+      <div className="columns-flex">
+        <div className="column" style={{ textAlign: "center"}}>
           <h1 style={{ fontSize: "18px" }}> Signup Form</h1>
           <input
             className="input"
@@ -47,11 +47,11 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
               setNewUser({ ...newUser, password: e.target.value })
             }
           />
-
+<div>
           <input
             className="input"
             type="text"
-            style={{ width: "60%", margin: "5px" }}
+            style={{ width: "16rem", marginTop:"5px", justifyContent: "space-between"}}
             placeholder="City"
             value={newUser.city}
             onChange={(e) => setNewUser({ ...newUser, city: e.target.value })}
@@ -59,7 +59,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
           <div className="select">
             <select
               className="is-hovered"
-              style={{ width: "50%", margin: "5px" }}
+              style={{ maxWidth: "11rem", margin: "2px"}}
               onChange={(e) =>
                 setNewUser({ ...newUser, state: e.target.value })
               }
@@ -76,11 +76,12 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
           </div>
           <button
             className="button"
-            style={{ background: "#8c9e5e", margin: "5px" }}
+            style={{ background: "#8c9e5e", marginRight: ".7rem"}}
             onClick={handleSignup}
           >
             Sign Up
           </button>
+          </div>
         </div>
       </div>
     </section>
