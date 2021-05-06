@@ -2,7 +2,7 @@ import React from "react";
 // there will need to be some functionality for the plants in the dropdown menu... not totally done
 function SearchByPlant() {
   return (
-    <section>
+    <section className= "container-flex">
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar">
           <span className="navbar-item">
@@ -12,10 +12,13 @@ function SearchByPlant() {
           <div className="field has-addons">
             <p className="control" />
             <input className="input" type="text" 
-             style= {{ width: "50%"}}
+             style= {{ width: "90%"}}
             placeholder="Find a plant" />
             <p className="control">
-              <button className="button is-primary">Search</button>
+              <button className="button is-primary"
+              style={{backgroundColor: "#8c9e5e",
+              color: "white", margin:"5px", borderRadius: "5px"}}
+              >Search</button>
             </p>
           </div>
           {/* <div className="navbar-item has-dropdown is-hoverable">
@@ -32,7 +35,7 @@ function SearchByPlant() {
               </ul>
             </div>
           </div> */}
-          <div className="select is-primary">
+          <div className="select is-dark" style={{margin: "5px"}}>
             <select className="is-hovered" name="Plants">
               <option>Select Plant Type</option>
               <option >Flowering Plants</option>
