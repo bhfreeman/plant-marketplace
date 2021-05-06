@@ -21,6 +21,15 @@ export default {
   savePost: function(postData) {
     return axios.post("/api/posts", postData);
   },
+  login: function(loginData) {
+    return axios.post("/api/user/login", loginData)
+  },
+  logout: function(){
+    return axios.post('/api/user/logout')
+  }, 
+  createUser: function(userData){
+    return axios.post('/api/user', userData)
+  }
 
   // @ToDo finish get for trefle API
   // Find Plant by Common Name via trefle.io web API

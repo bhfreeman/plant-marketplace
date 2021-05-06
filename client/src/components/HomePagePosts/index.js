@@ -8,7 +8,8 @@ function HomePagePosts({ plant_name, image_link, description, contact_email }) {
     // flex box with margin and padding so two can fit side by side
     <div className="is-flex
     is-flex-direction-column" 
-    style={{ maxWidth: "250px", minHeight: "300px", marginBottom:"2em", border:"black 1px dashed", borderRadius:"8px", padding:"1rem" }}>
+    // className={styles.cardContent}
+    style={{ maxWidth: "250px", minHeight: "300px", marginBottom:"2em", border:"black 1px dashed", borderRadius:"8px", padding:"1rem",  boxShadow:" 0 10px 20px rgba(0,0,0,.4)"}}>
 
       <div className="card-image ">
         <figure className="image is-4by3">

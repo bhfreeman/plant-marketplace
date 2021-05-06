@@ -3,4 +3,4 @@
 **/build
 **/dist
 .env
-**/parkage-lock.json
+**/package-lock.json
