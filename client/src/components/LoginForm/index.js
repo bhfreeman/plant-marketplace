@@ -9,7 +9,7 @@ const LoginForm=(props)=>{
       <div className= "columns">
         <div className= "column" style= {{textAlign: "center"}}>
       <div className="field">
-        <h1 style= {{fontSize: "18px" }}>Login Here</h1>
+        <h1 style= {{fontSize: "20px" }}>Login Here</h1>
         <p className="control has-icons-left has-icons-righ">
           <input className="input"
           style={{width: "50%", margin: "5px"}} 

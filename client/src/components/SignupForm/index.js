@@ -5,7 +5,7 @@ function SignUpForm() {
         <section className= "container-flex">
         <div className= "columns">
         <div className= "column" style= {{textAlign: "center"}}>
-      <h1 style={{fontSize: "18px"}}> Signup Form</h1>
+      <h1 style={{fontSize: "20px"}}> Signup Form</h1>
    <input className=
    "input" 
    type="text" 
