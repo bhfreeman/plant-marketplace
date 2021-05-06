@@ -3,10 +3,11 @@ import React from "react";
 function SearchByPlant() {
   return (
     <section className= "container-flex">
+      <div>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar">
           <span className="navbar-item">
-            <strong>Search by plant</strong>
+            <strong>Search by Plant</strong>
           </span>
           <p className="subtitle is-5 text-center" />
           <div className="field has-addons">
@@ -48,6 +49,7 @@ function SearchByPlant() {
           </div>
         </div>
       </nav>
+      </div>
     </section>
   );
 }

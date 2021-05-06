@@ -3,6 +3,7 @@ import React from "react";
 function SearchLocationForm() {
   return (
     <section className= "container-flex">
+      <div>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar">
           <p className="navbar-item">
@@ -12,7 +13,7 @@ function SearchLocationForm() {
           <div className="field has-addons">
             <p className="control" />
             <input className="input" type="text"
-             style= {{ width: "70%"}}
+             style= {{ width: "90%"}}
              placeholder="Enter your city" />
             <p className="control">
               <button className="button" style= {{backgroundColor: "#8c9e5e",
@@ -135,6 +136,7 @@ function SearchLocationForm() {
           </div>
         </div>
       </nav>
+      </div>
     </section>
   );
 }
