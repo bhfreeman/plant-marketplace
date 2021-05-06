@@ -1,27 +1,36 @@
 import React from 'react'
 // this would be used for the landing page- a sample of what can be done...
-function BaseSalesPost({img,title,plant,description,content,email}) {
-    return (
-<section className="container-fluid">
-      <div className="columns">
-        <div className="column" style={{}}>
-          <div className="card" style={{}}>
-            <div className="card-image">
-              <img className="image" src={img} alt={title} />
-            </div>
-            <div className="media-content">
-              <p className="title is-4">Title: {title}</p>
-              <p className="subtitle is-6">Type of Plant: {plant}</p>
-              <p className="subtitle is-6">Description{description}</p>
-            </div>
-            <div className="content">
-                <p className= "is-size-6">{content}</p>
-              <a href={email}>Contact email</a>
-            </div>
+function BaseSalesPost({plant_name, description, image_link, username, email, city, state}) {
+  return (
+    // flex box with margin and padding so two can fit side by side
+    <div className="is-flex
+    is-flex-direction-column" 
+    // className={styles.cardContent}
+    style={{ maxWidth: "250px", minHeight: "300px", marginBottom:"2em", border:"black 1px dashed", borderRadius:"8px", padding:"1rem",  boxShadow:" 0 10px 20px rgba(0,0,0,.4)"}}>
+
+      <div className="card-image ">
+        <figure className="image is-4by3">
+          <img src={image_link} alt="Image" />
+        </figure>
+      </div>
+        <div className="content is-flex is-flex-direction-column"
+        style={{height:"100%"}}>
+          <p>
+            <strong>
+              <em>Plant Name: </em>
+              {plant_name}
+            </strong>
+            <br></br>
+            {description}
+          </p>
+          <div
+            className="content"
+            style={{ height:"100%", display:"flex", flexDirection:"column", justifyContent:"flex-end" }}>
+            <p className="is-size-6">{}</p>
+            <a href={email}>Contact Seller {username}</a>
           </div>
         </div>
       </div>
-    </section>
   );
 }
 
