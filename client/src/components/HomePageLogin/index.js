@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 const HomePageLogin = (props) => {
   return (
     <section
-      className="container-flex is-justify-content-center"
+      className="container-flex"
       style={{
-        border: "2px solid black",
-        marginTop: "20px",
+        justifyContent: "center",
+        alignItems: "center",
         position: "relative",
         margin: "20px",
+        padding:"1rem",
       }}
     >
-      <div className= "columns">
-      <div className="column">
+
         <div className=" text">
           <h1
             className="title"
@@ -36,15 +36,22 @@ const HomePageLogin = (props) => {
             Coming soon...Community conversations
           </p>
         </div>
-
+        <div style= {{border: "1px solid", 
+        height: "100px",
+        display: "flex", 
+        justifyContent: "center",
+        alignItems: "center",
+        position: "relative",
+        
+        }}>
         {/* how to change the color of the button as a class not in bulma */}
         <Link
           to="/login-signup"
           style={{
-            margin: "10px",
             backgroundColor: "#8c9e5e",
             color: "white",
-           
+            display: "flex",
+            justifyContent: "center",
           }}
           className="button"
           // onChange={props.handleInputChange}
@@ -52,19 +59,15 @@ const HomePageLogin = (props) => {
         >
           Login/Signup
         </Link>
-        <br></br>
+        <div style= {{margin: "5px"}}></div>
         <Link className= "is-align-content-center"
           to="/search"
           style={{
-            margin: "10px",
             backgroundColor: "#8c9e5e",
             color: "white",
-          
-            
-            // -ms-Transform: "translateY(-50%)",
-            // transform: "translateY(-50%)"
-           
-          
+            display: "flex",
+            alignItems: "center",
+  
           }}
           className="button"
           // onChange={props.handleInputChange}
@@ -72,8 +75,7 @@ const HomePageLogin = (props) => {
         >
           Browse
         </Link>
-      </div>
-      </div>
+        </div>
     </section>
   );
 };
