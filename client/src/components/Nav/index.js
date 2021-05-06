@@ -74,7 +74,7 @@ function Nav({ loggedIn }) {
             style={{ color: "black", fontSize: "18px" }}
             className="navbar-item"
           >
-            Contact
+         Search
           </Link>
         </div>
         {loggedIn && (
