@@ -5,14 +5,21 @@ function UserPagePosts({posts, user}) {
   
   return (
     <section className="container-fluid">
-      {posts.map((post, i) => {
-        return <BaseSalesPost 
-        key={i}
+      {posts.map((post) => {
+        return (
+        <div key={post._id}>
+
+        <BaseSalesPost 
+        key={post._id}
         plantName={post.plant_name}
         description={post.description}
         image_link={post.image_link}
         username={user.username}
         email={user.email} />
+        <button key={"update"+post._id} className="button is-success">Update Post</button>
+            <button key={"delete"+post._id} className="button is-danger">Delete Post</button>
+        </div>
+        )
       })}
       {/* <p className="title" style={{}}>
         {" "}
@@ -54,8 +61,8 @@ function UserPagePosts({posts, user}) {
               <p className="is-size-6">{content}</p>
               <a href={email}>Contact email</a>
             </div> */}
-            <button className="button is-success">Update</button>
-            <button className="button is-danger">Delete ALL</button>
+            {/* <button className="button is-success">Update</button>
+            <button className="button is-danger">Delete ALL</button> */}
           {/* </div>
         </div>
       </div> */}
