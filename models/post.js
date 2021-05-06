@@ -6,7 +6,7 @@ const postSchema = new Schema(
     plant_name: { type: String, required: true },
     description: { type: String, required: true },
     image_link: { type: String },
-    user_id: { type: Number, required: true },
+    user_id: { type: String, required: true },
   },
   {
     timestamps: true,

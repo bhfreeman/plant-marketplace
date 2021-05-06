@@ -4,12 +4,12 @@ import UserPagePosts from '../components/UserPagePosts'
 import CreatePostForm from "../components/CreatePostForm";
 
 
-function UserAccountPage() {
+function UserAccountPage({userId}) {
   return (
     <div className="user-page">
       <div className="user-info-sidebar">
         <UserInfo />
-        <CreatePostForm/>
+        <CreatePostForm user_id={userId} />
       </div>
       <div className="user-postings">
           <UserPagePosts/>

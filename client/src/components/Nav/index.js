@@ -1,11 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import API from '../../utils/API'
 // import { useStoreContext } from "../../utils/GlobalState";
 
-function Nav({ loggedIn }) {
+function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
   // const [store] = useStoreContext();
+  const history = useHistory();
+
   function toggleBurgerMenu() {
     document.querySelector(".navbar-menu").classList.toggle("is-active");
+  }
+
+  async function handleLogout () {
+    try{
+      await API.logout();
+      await setUserId('');
+      await setLoggedin(false)
+      history.push('/')
+    } catch(err){
+
+    }
   }
   return (
     <nav
@@ -64,6 +78,16 @@ function Nav({ loggedIn }) {
               Login/Signup
             </Link>
           )}
+          {loggedIn && (
+            <Link
+              to="/account-page"
+              style={{ color: "black", fontSize: "18px" }}
+              className="navbar-item"
+              onClick={toggleBurgerMenu}
+            >
+              Account Page
+            </Link>
+          )}
 
           {/* <Link to="/login-signup" className="navbar-item" 
           style={{ color: "black" , fontSize: "18px" }}onClick={toggleBurgerMenu}>
@@ -79,7 +103,7 @@ function Nav({ loggedIn }) {
         </div>
         {loggedIn && (
           <div className="navbar-end">
-            <button className="navbar-item">Logout</button>
+            <button className="navbar-item" onClick={handleLogout}>Logout</button>
           </div>
         )}
       </div>

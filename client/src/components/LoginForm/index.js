@@ -7,7 +7,7 @@ const LoginForm = ({ email, password, setEmail, setPassword, handleLogin }) => {
         <div className="column" style={{ textAlign: "center" }}>
           <div className="field">
             <h1 style={{ fontSize: "20px" }}>Login Here</h1>
-            <p className="control has-icons-left has-icons-right">
+            {/* <p className="control has-icons-left has-icons-right">
               <input
                 className="input"
                 style={{ width: "50%", margin: "5px" }}
@@ -16,7 +16,7 @@ const LoginForm = ({ email, password, setEmail, setPassword, handleLogin }) => {
                 type="userName"
                 placeholder="Username"
               />
-               </p>
+               </p> */}
               <p className="control has-icons-left has-icons-right">
                 <input
                   className="input"
@@ -43,7 +43,7 @@ const LoginForm = ({ email, password, setEmail, setPassword, handleLogin }) => {
                   <button
                     className="button"
                     style={{ background: "#8c9e5e", margin: "5px" }}
-                    onClick={props.handleFormSubmit}
+                    onClick={handleLogin}
                   >
                     Welcome back
                   </button>
