@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Redirect} from 'react-router-dom'
 import SignupForm from "../components/SignupForm";
 import LoginForm from "../components/LoginForm";
 import API from "../utils/API";
@@ -24,9 +25,11 @@ function Login({ setUserId, setLoggedIn}) {
         email,
         password,
       });
-      setUserId(apicall.data.user.id)
-      setLoggedIn(apicall.data.loggedIn)
-      window.location.replace('/')
+      console.log(apicall)
+      await setUserId(apicall.data.user.id)
+      await setLoggedIn(true)
+      return <Redirect to="/account-page" />
+
     } catch(err) {
       alert(err)
     }
@@ -34,7 +37,7 @@ function Login({ setUserId, setLoggedIn}) {
 
   async function handleSignup() {
     try{
-      const signup = await API.createUser({
+      await API.createUser({
         name: newUser.name,
         username: newUser.username,
         email: newUser.email,
@@ -42,12 +45,6 @@ function Login({ setUserId, setLoggedIn}) {
         city: newUser.city,
         state: newUser.state
       })
-      // const login = await API.login({
-      //   email: newUser.email,
-      //   password: newUser.password
-      // })
-      setLoggedIn(true)
-      window.location.replace('/')
       
     } catch(err) {
       alert(err)

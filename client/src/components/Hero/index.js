@@ -8,7 +8,7 @@ function Hero() {
     <div className="container-flex">
       <section className="hero">
         <div
-          class="hero-body"
+          className="hero-body"
           style={{ width: "100%",
            padding: 0, margin: "0%",
             position:"relative" }}

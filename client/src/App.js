@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { StoreProvider } from "./utils/GlobalState";
 import { CloudinaryContext } from "cloudinary-react";
+import useStickyState from './utils/stickystate'
 
 // Pages
 import Nav from "./components/Nav";
@@ -12,15 +13,23 @@ import Login from "./pages/Login";
 import Footer from "./components/Footer";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false)
-  const [userId, setUserId] = useState('')
+  // const [loggedIn, setLoggedIn] = useState(false)
+  // const [userId, setUserId] = useState('test')
+  const [loggedIn, setLoggedIn] = useStickyState(false, 'loggedIn')
+  const [userId, setUserId] = useStickyState('', 'userId')
 
   return (
     <StoreProvider>
       <CloudinaryContext cloudName="repotted">
         <Router>
           <div>
-            <Nav loggedIn={loggedIn} />
+            <p>Logged IN: {loggedIn}. userId: {userId}</p>
+            <Nav 
+            loggedIn={loggedIn} 
+            setLoggedin={setLoggedIn} 
+            userId={userId} 
+            setUserId={setUserId}
+            />
             <Switch>
               <Route exact path="/" component={LandingPg} />
               <Route exact path="/search" component={SearchPage} />
