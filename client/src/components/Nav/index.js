@@ -98,7 +98,7 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
             style={{ color: "black", fontSize: "18px" }}
             className="navbar-item"
           >
-            Contact
+         Search
           </Link>
         </div>
         {loggedIn && (

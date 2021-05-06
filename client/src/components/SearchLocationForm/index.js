@@ -2,7 +2,8 @@ import React from "react";
 
 function SearchLocationForm() {
   return (
-    <section>
+    <section className= "container-flex">
+      <div>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar">
           <p className="navbar-item">
@@ -12,10 +13,11 @@ function SearchLocationForm() {
           <div className="field has-addons">
             <p className="control" />
             <input className="input" type="text"
-             style= {{ width: "50%"}}
+             style= {{ width: "90%"}}
              placeholder="Enter your city" />
             <p className="control">
-              <button className="button is-primary">Search</button>
+              <button className="button" style= {{backgroundColor: "#8c9e5e",
+            color: "white",margin:"5px", borderRadius: "5px"}}>Search</button>
             </p>
           </div>
           {/* <div className="navbar-item has-dropdown is-hoverable">
@@ -76,7 +78,7 @@ function SearchLocationForm() {
 
             </div>
           </div> */}
-          <div className="select is-success">
+          <div className="select is-dark">
             <select className="is-hovered">
             <option  >Alabama</option>
               <option  >Alaska</option>
@@ -134,6 +136,7 @@ function SearchLocationForm() {
           </div>
         </div>
       </nav>
+      </div>
     </section>
   );
 }
