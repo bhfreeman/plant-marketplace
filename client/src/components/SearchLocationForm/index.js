@@ -4,12 +4,11 @@ function SearchLocationForm() {
   return (
     <section className= "container-flex">
       <div>
-      <nav className="level">
-        <div className="level-left">
+      <nav className="" role= "navigation" aria-label="main-navigation">
+        <div className="">
           <p className="subtitle is-5">
             <strong>Search by Location</strong>
           </p>
-          <p className="level-item" />
           <div className="field has-addons">
             <p className="control" />
             <input className="input" type="text"
@@ -78,7 +77,7 @@ function SearchLocationForm() {
 
             </div>
           </div> */}
-          <div className="level-right select is-dark">
+          <div className="select is-dark">
             <select className="is-hovered">
             <option  >Alabama</option>
               <option  >Alaska</option>

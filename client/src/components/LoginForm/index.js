@@ -17,7 +17,7 @@ const LoginForm = ({ email, password, setEmail, setPassword, handleLogin }) => {
                 placeholder="Username"
               />
                </p> */}
-              <p className="control has-icons-left has-icons-right">
+              <p className="control">
                 <input
                   className="input"
                   style= {{width: "50%", margin: "5px"}}
@@ -29,7 +29,7 @@ const LoginForm = ({ email, password, setEmail, setPassword, handleLogin }) => {
               </p>
             </div>
             <div className="field">
-              <p className="control has-icons-left">
+              <p className="control">
                 <input
                   className="input"
                   style={{ width: "50%", margin: "5px" }}

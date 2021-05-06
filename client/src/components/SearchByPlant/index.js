@@ -4,12 +4,11 @@ function SearchByPlant() {
   return (
     <section className= "container-flex">
       <div>
-      <nav className="level">
-        <div className="level-left">
+      <nav role= "navigation" aria-lable= "main navigation">
+        <div >
           <span className="subtitle is-5">
             <strong>Search by Plant</strong>
           </span>
-          <p className="level-item" />
           <div className="field has-addons">
             <p className="control" />
             <input className="input" type="text" 
@@ -37,7 +36,7 @@ function SearchByPlant() {
               </ul>
             </div>
           </div> */}
-          <div className=" level-right select is-dark">
+          <div className="select is-dark">
             <select className="is-hovered" name="Plants">
               <option>Select Plant Type</option>
               <option >Flowering Plants</option>
