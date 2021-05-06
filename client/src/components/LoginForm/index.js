@@ -20,6 +20,7 @@ const LoginForm = ({ email, password, setEmail, setPassword, handleLogin }) => {
               <p className="control has-icons-left has-icons-right">
                 <input
                   className="input"
+                  style= {{width: "50%", margin: "5px"}}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
