@@ -1,7 +1,7 @@
 import React from "react";
 // this would be used for the landing page- a sample of what can be done...
 function BaseSalesPost({
-  plant_name,
+  plantName,
   description,
   image_link,
   username,
@@ -33,7 +33,7 @@ function BaseSalesPost({
       <p>
         <strong>
           <em>Plant Name: </em>
-          {plant_name}
+          {plantName}
         </strong>
       </p>
       <div

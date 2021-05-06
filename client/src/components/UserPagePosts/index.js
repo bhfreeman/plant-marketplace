@@ -1,10 +1,20 @@
 import React from "react";
 import BaseSalesPost from '../BaseSalesPost'
 // user can update their posts on here. Need delete and update functions.
-function UserPagePosts({img,title,plant,description,email,content}) {
+function UserPagePosts({posts, user}) {
+  
   return (
     <section className="container-fluid">
-      <p className="title" style={{}}>
+      {posts.map((post, i) => {
+        return <BaseSalesPost 
+        key={i}
+        plantName={post.plant_name}
+        description={post.description}
+        image_link={post.image_link}
+        username={user.username}
+        email={user.email} />
+      })}
+      {/* <p className="title" style={{}}>
         {" "}
         Update your posts{" "}
       </p>
@@ -43,12 +53,12 @@ function UserPagePosts({img,title,plant,description,email,content}) {
             <div className="content">
               <p className="is-size-6">{content}</p>
               <a href={email}>Contact email</a>
-            </div>
+            </div> */}
             <button className="button is-success">Update</button>
             <button className="button is-danger">Delete ALL</button>
-          </div>
+          {/* </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

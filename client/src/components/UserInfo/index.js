@@ -1,16 +1,7 @@
 import React, {useEffect, useState} from "react";
 import API from '../../utils/API'
 
-function UserInfo({userId, setPosts}) {
-
-  const [user, setUser] = useState({
-    name:'',
-    username:'',
-    email:'',
-    // password:'',
-    city: '',
-    state: ''
-  })
+function UserInfo({userId, setPosts, setUser, user}) {
 
   const getUserInfo = async () => {
     try {
