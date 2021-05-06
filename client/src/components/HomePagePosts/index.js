@@ -11,7 +11,7 @@ function HomePagePosts({ plant_name, image_link, description, contact_email }) {
     style={{ maxWidth: "250px", minHeight: "300px", marginBottom:"2em", border:"black 1px dashed", borderRadius:"8px", padding:"1rem" }}>
 
       <div className="card-image ">
-        <figure class="image is-4by3">
+        <figure className="image is-4by3">
           <img src={image_link} alt="Image" />
         </figure>
       </div>
