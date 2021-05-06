@@ -50,7 +50,7 @@ function Nav() {
            style={{ color: "black", fontSize: "18px" }}
             className="navbar-item"
           >
-          Contact
+         Search
           </Link>
         </div>
       </div>
