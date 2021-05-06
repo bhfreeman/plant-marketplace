@@ -8,6 +8,8 @@ function Login() {
       <div className="sign-up">
         <SignupForm />
       </div>
+      <br></br>
+      <br></br>
       <div className="login">
         <LoginForm />
       </div>

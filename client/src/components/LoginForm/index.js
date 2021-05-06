@@ -7,17 +7,20 @@ const LoginForm=(props)=>{
   return (
     <section>
       <div className="field">
+        <h1>Login Here</h1>
         <p className="control has-icons-left has-icons-right">
-          <input className="input" 
+          <input className="input"
+          style={{width: "50%", margin: "5px"}} 
           value={props.userName}
           onChange={props.handleInputChange}
           type="userName" 
-          placeholder="userName" />
+          placeholder="username" />
         </p>
       </div>
       <div className="field">
         <p className="control has-icons-left">
           <input className="input" 
+          style={{width: "50%", margin: "5px"}} 
           type="password"
           value= {props.password}
           onChange={props.handleInputChange} 
@@ -26,7 +29,7 @@ const LoginForm=(props)=>{
       </div>
       <div className="field">
         <p className="control">
-          <button className="button is-success is-inverted"
+          <button className="button"
           onClick= {props.handleFormSubmit}
           >
             Login
