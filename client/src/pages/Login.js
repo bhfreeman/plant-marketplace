@@ -59,6 +59,8 @@ function Login({ setUserId, setLoggedIn}) {
       <div className="sign-up">
         <SignupForm newUser={newUser} setNewUser={setNewUser} handleSignup={handleSignup}/>
       </div>
+      <br></br>
+      <br></br>
       <div className="login">
         <LoginForm
           email={email}
