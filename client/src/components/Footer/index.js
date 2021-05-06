@@ -8,7 +8,7 @@ function Footer() {
     <footer className="footer">
   <div className="content has-text-centered">
     <p>
-      <strong>Re-Potted</strong>by Brett, Kyle and Emily, 2021/<a href="https://github.com/bhfreeman/plant-marketplace">Github</a>
+      <strong>Re-Potted</strong>{''} by Brett, Kyle and Emily, 2021/<a href="https://github.com/bhfreeman/plant-marketplace">Github</a>
     </p>
       <p>Images found on Unsplash</p>
   </div>
