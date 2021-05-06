@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import API from '../../utils/API'
 // import { useStoreContext } from "../../utils/GlobalState";
 
 function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
   // const [store] = useStoreContext();
+  const history = useHistory();
+
   function toggleBurgerMenu() {
     document.querySelector(".navbar-menu").classList.toggle("is-active");
   }
@@ -12,8 +14,9 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
   async function handleLogout () {
     try{
       await API.logout();
-      setUserId('');
-      setLoggedin(false)
+      await setUserId('');
+      await setLoggedin(false)
+      history.push('/')
     } catch(err){
 
     }

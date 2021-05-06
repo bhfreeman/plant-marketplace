@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Redirect} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import SignupForm from "../components/SignupForm";
 import LoginForm from "../components/LoginForm";
 import API from "../utils/API";
@@ -8,6 +8,7 @@ function Login({ setUserId, setLoggedIn}) {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
 
   const [newUser, setNewUser] = useState({
     name: '',
@@ -28,7 +29,7 @@ function Login({ setUserId, setLoggedIn}) {
       console.log(apicall)
       await setUserId(apicall.data.user.id)
       await setLoggedIn(true)
-      return <Redirect to="/account-page" />
+      history.push('/account-page')
 
     } catch(err) {
       alert(err)
@@ -45,7 +46,7 @@ function Login({ setUserId, setLoggedIn}) {
         city: newUser.city,
         state: newUser.state
       })
-      
+      history.push('/account-page')
     } catch(err) {
       alert(err)
     }
