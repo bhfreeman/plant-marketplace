@@ -4,20 +4,20 @@ function SearchLocationForm() {
   return (
     <section className= "container-flex">
       <div>
-      <nav className="navbar" role="navigation" aria-label="main navigation">
-        <div className="navbar">
-          <p className="navbar-item">
+      <nav className="level">
+        <div className="level-left">
+          <p className="subtitle is-5">
             <strong>Search by Location</strong>
           </p>
-          <p className="subtitle is-5 text-center" />
+          <p className="level-item" />
           <div className="field has-addons">
             <p className="control" />
             <input className="input" type="text"
-             style= {{ width: "90%"}}
-             placeholder="Enter your city" />
+             style= {{ width: "70%"}}
+             placeholder="Enter your City" />
             <p className="control">
               <button className="button" style= {{backgroundColor: "#8c9e5e",
-            color: "white",margin:"5px", borderRadius: "5px"}}>Search</button>
+            color: "white",margin:"2.5px", borderRadius: "5px"}}>Search</button>
             </p>
           </div>
           {/* <div className="navbar-item has-dropdown is-hoverable">
@@ -78,7 +78,7 @@ function SearchLocationForm() {
 
             </div>
           </div> */}
-          <div className="select is-dark">
+          <div className="level-right select is-dark">
             <select className="is-hovered">
             <option  >Alabama</option>
               <option  >Alaska</option>
