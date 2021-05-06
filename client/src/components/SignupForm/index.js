@@ -3,35 +3,45 @@ import React from 'react'
 function SignUpForm() {
     return (
         <section className= "container-flex">
-        <div className= "is-justify-content-center">
-       <bold><h1 style={{fontSize: "18px"}}> Signup Form</h1></bold> 
+        <div className= "columns">
+        <div className= "column" style= {{textAlign: "center"}}>
+      <h1 style={{fontSize: "18px"}}> Signup Form</h1>
    <input className=
-   "input is-success" 
+   "input" 
    type="text" 
    style= {{ width: "50%", margin: "5px"}}
    placeholder="Name"/>
 
-   <input className="input is-success" 
+   <input className="input" 
    type="text" 
    style= {{ width: "50%", margin: "5px"}}
    placeholder="Username"/>
 
-   <input className="input is-success" 
+   <input className="input" 
    type="text" 
    style= {{ width: "50%", margin: "5px"}}
-   placeholder="email"/>
+   placeholder="Email"/>
 
-   <input className="input is-success" 
+   <input className="input" 
    type="text" 
    style= {{ width: "50%", margin: "5px"}}
    placeholder="Password"/>
 
-   <input className="input is-success" 
+   <input className="input" 
    type="text"
    style= {{ width: "50%", margin: "5px"}}
     placeholder="City"/>
-
-  <button className="button">Welcome!</button>
+  <div className= "field">
+    <p className= "control">
+  <button className="button"
+    style= {{background: "#8c9e5e", margin: "5px"}}
+          >
+          Hello
+     
+    </button>
+    </p>
+    </div>
+    </div>
     </div>
     </section>
     )

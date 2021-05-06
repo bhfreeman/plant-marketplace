@@ -23,21 +23,25 @@ const HomePageLogin = (props) => {
             {" "}
             Join Repotted
           </h1>
-          <h1 className="is-size-4" style={{ textAlign: "center" }}>
+          <h1 style={{ textAlign: "center", fontSize:"24px" }}>
             Buy
           </h1>
-          <h1 className="is-size-4" style={{ textAlign: "center" }}>
+          <br></br>
+          <h1  style={{ textAlign: "center", fontSize:"23px"}}>
             Sell
           </h1>
-          <h1 className="is-size-4" style={{ textAlign: "center" }}>
+          <br></br>
+          <h1 style={{ textAlign: "center", fontSize:"22px"}}>
             Any variety of plants
           </h1>
-          <p className="is-size-5" style={{ textAlign: "center" }}>
+          <br></br>
+          <p style={{ textAlign: "center", fontSize:"18px"}}>
             Coming soon...Community conversations
           </p>
+          <br></br>
         </div>
-        <div style= {{border: "1px solid", 
-        height: "100px",
+        <div style= {{border: "1px black dashed", 
+        height: "95px",
         display: "flex", 
         justifyContent: "center",
         alignItems: "center",
@@ -67,7 +71,6 @@ const HomePageLogin = (props) => {
             color: "white",
             display: "flex",
             alignItems: "center",
-  
           }}
           className="button"
           // onChange={props.handleInputChange}
