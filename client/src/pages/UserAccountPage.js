@@ -8,8 +8,8 @@ function UserAccountPage({userId}) {
   return (
     <div className="user-page">
       <div className="user-info-sidebar">
-        <UserInfo />
-        <CreatePostForm user_id={userId} />
+        <UserInfo userId={userId} />
+        <CreatePostForm userId={userId} />
       </div>
       <div className="user-postings">
           <UserPagePosts/>

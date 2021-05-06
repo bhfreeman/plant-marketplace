@@ -29,6 +29,9 @@ export default {
   }, 
   createUser: function(userData){
     return axios.post('/api/user', userData)
+  },
+  getUserInfo: function(userID){
+    return axios.get(`/api/user/find/${userID}`)
   }
 
   // @ToDo finish get for trefle API

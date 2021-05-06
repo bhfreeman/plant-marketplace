@@ -20,7 +20,7 @@ router
     .post(userController.logout);
 // Get user by id
 router
-    .route('/:id')
+    .route('/find/:id')
     .get(userController.findById)
     // Update user, to add favorites
     .put(userController.update);
