@@ -27,6 +27,7 @@ module.exports = {
   //Find a specific user by the id
   findById: function (req, res) {
     db.User.findById(req.params.id)
+    .populate('posts')
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
