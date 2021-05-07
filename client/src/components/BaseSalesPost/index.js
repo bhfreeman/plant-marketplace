@@ -3,7 +3,7 @@ import React from "react";
 function BaseSalesPost({ plant }) {
 
   const {plant_name, description, image_link, plant_type, user} = plant;
-  console.log(plant)
+
   const {username, email} = user[0]
 
   // console.log(username)
