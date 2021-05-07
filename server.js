@@ -20,7 +20,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({
-    mongoUrl: "mongodb://localhost/repotteddb"
+    mongoUrl: process.env.MONGODB_URI || "mongodb://localhost/repotteddb"
   })
 }))
 // Serve up static assets (usually on heroku)

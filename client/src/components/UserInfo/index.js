@@ -1,30 +1,28 @@
-import React, {useEffect, useState} from "react";
-import API from '../../utils/API'
+import React, { useEffect } from "react";
+import API from "../../utils/API";
 
-function UserInfo({userId, setPosts, setUser, user}) {
-
+function UserInfo({ userId, setPosts, setUser, user }) {
   const getUserInfo = async () => {
     try {
-     let response = await API.getUserInfo(userId)
-     await setUser({
-       ...user,
-       name: response.data.name,
-       username: response.data.username,
-       email: response.data.email,
-       city: response.data.city,
-       state: response.data.state
-    })
-    await setPosts(response.data.posts)
-
-    } catch(err){
-      console.error(err)
+      let response = await API.getUserInfo(userId);
+      await setUser({
+        ...user,
+        name: response.data.name,
+        username: response.data.username,
+        email: response.data.email,
+        city: response.data.city,
+        state: response.data.state,
+      });
+      await setPosts(response.data.posts);
+    } catch (err) {
+      console.error(err);
     }
-  }
+  };
 
   useEffect(() => {
     getUserInfo();
-  }, [])
-
+    // eslint-disable-next-line
+  }, []);
 
   return (
     //did we want the ability to update infomation on here?
@@ -37,7 +35,9 @@ function UserInfo({userId, setPosts, setUser, user}) {
             <h1>UserName: {user.username}</h1>
             <h1>Email: {user.email}</h1>
             {/* <h1>Password: {}</h1> */}
-            <h1>City, State: {user.city}, {user.state}</h1>
+            <h1>
+              City, State: {user.city}, {user.state}
+            </h1>
           </div>
         </div>
       </div>

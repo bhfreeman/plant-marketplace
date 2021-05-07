@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 //we need to add bulma react as a dependency
-const HomePageLogin = (props) => {
+const HomePageLogin = () => {
   return (
     <section
       className="container-flex"
@@ -72,6 +72,7 @@ const HomePageLogin = (props) => {
             display: "flex",
             alignItems: "center",
           }}
+              // eslint-disable-next-line
           className="button"
           // onChange={props.handleInputChange}
           // value={props.browse}
