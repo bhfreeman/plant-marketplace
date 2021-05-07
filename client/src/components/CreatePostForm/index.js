@@ -48,9 +48,9 @@ function CreatePostForm({ user_id }) {
 
       <textarea
         className="textarea is-dark"
-        style= {{ width:"50%", display: "flex",
-          maxWidth:"50%",
-          maxHeight:"30%", margin:"5px"}}
+        style= {{ width:"50%", padding: 0, display: "flex",
+          margin:"5px", maxWidth: "300px", height: "auto",
+          maxHeight:"300px", rows:"4", cols:"50"}}
         placeholder="description of plant, condition, price"
         value={postInfo.description}
         onChange={(e) =>
