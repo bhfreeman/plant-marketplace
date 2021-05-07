@@ -41,7 +41,7 @@ function CreatePostForm({ user_id }) {
           <input
             className="input is-dark"
             type="text"
-            style={{ width: "50%", marginLeft: "7px" }}
+            style={{ width: "50%", marginLeft: "7px"}}
             placeholder="Plant Name"
             value={postInfo.plant_name}
             onChange={(e) =>
@@ -59,9 +59,10 @@ function CreatePostForm({ user_id }) {
           <textarea
             className="textarea is-dark"
             style={{
-              display: "flex",
-              margin: "5px",
-              rows:"5", cols:"10", width:"50%"
+             display: "flex",
+              margin: "7px",
+              rows: "5",
+              cols: "10",
             }}
             placeholder="description of plant, condition, price"
             value={postInfo.description}

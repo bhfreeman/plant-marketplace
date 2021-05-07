@@ -12,6 +12,7 @@ const HomePageLogin = (props) => {
         position: "relative",
         margin: "20px",
         padding:"1rem",
+
       }}
     >
 
@@ -46,6 +47,7 @@ const HomePageLogin = (props) => {
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
+        boxShadow: " 0 10px 20px rgba(0,0,0,.4)"
         
         }}>
         {/* how to change the color of the button as a class not in bulma */}
