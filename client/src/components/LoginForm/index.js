@@ -6,20 +6,21 @@ const LoginForm = ({ email, password, setEmail, setPassword, handleLogin }) => {
       <div className="columns">
         <div className="column" style={{ textAlign: "center" }}>
           <div className="field">
-            <h1 style={{ fontSize: "20px" }}>Login Here</h1>
+            <h1 style={{ fontSize: "20px", }}>Login Here</h1>
             {/* <p className="control has-icons-left has-icons-right">
               <input
                 className="input"
-                style={{ width: "50%", margin: "5px" }}
                 value={props.userName}
+                style={{width: "50%", margin: "5px"}}
                 onChange={props.handleInputChange}
                 type="userName"
                 placeholder="Username"
               />
                </p> */}
-              <p className="control has-icons-left has-icons-right">
+              <p className="control">
                 <input
                   className="input"
+                  style= {{width: "50%", margin: "5px"}}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
@@ -28,7 +29,7 @@ const LoginForm = ({ email, password, setEmail, setPassword, handleLogin }) => {
               </p>
             </div>
             <div className="field">
-              <p className="control has-icons-left">
+              <p className="control">
                 <input
                   className="input"
                   style={{ width: "50%", margin: "5px" }}
