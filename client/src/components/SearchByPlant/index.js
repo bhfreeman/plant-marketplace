@@ -1,6 +1,6 @@
 import React from "react";
 // there will need to be some functionality for the plants in the dropdown menu... not totally done
-function SearchByPlant() {
+function SearchByPlant({value, handleInputChange}) {
   return (
     <section className= "container-flex">
       <div>
@@ -14,7 +14,10 @@ function SearchByPlant() {
             <p className="control" />
             <input className="input" type="text" 
              style= {{ width: "90%"}}
-            placeholder="Find a plant" />
+            placeholder="Find a plant"
+            value={value}
+            onChange={handleInputChange}
+            />
             <p className="control">
               <button className="button is-primary"
               style={{backgroundColor: "#8c9e5e",
