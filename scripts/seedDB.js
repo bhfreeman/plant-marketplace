@@ -106,7 +106,9 @@ await db.Post.deleteMany({})
     });
 }
 
+const init = async () => {
+  await seedUser();
+  await seedPost();
+}
 
-await seedUser();
-await seedPost();
-
+init()
