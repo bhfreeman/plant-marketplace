@@ -27,7 +27,8 @@ function UserInfo({ userId, setPosts, setUser, user }) {
     //did we want the ability to update infomation on here?
     <section className="container-flex">
       <div className="columns">
-        <div className="column">
+        <div className="column" style= {{display: "flex", flexDirection: "column", alignItems: "center"}}
+        >
         <h1
           className="title"
           style={{ display: "flex",justifyContent: "center",fontSize: "25px", color: "#648c11" }}
