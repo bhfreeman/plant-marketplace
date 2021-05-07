@@ -59,6 +59,7 @@ function CreatePostForm({ user_id }) {
         } >
           <option>Select Plant Type</option>
           <option value="flowering" >Flowering Plants</option>
+          <option value="foliage">Foliage Type</option>
           <option value="succulents/cacti" >Succulents and Cacti</option>
           <option value="veggie" >Vegetables</option>
           <option value="seeds" >Seeds</option>

@@ -8,6 +8,7 @@ function SearchPage({ user }) {
   //state that stores user posts in order to map over BaseSalesPost
   const [posts, setPosts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [searchPlantType, setSearchPlantType] = useState(null);
 
   const getUserPosts = async () => {
     try {
@@ -24,14 +25,29 @@ function SearchPage({ user }) {
 
   //search posts.plantName
   const filteredPlantName = posts.filter((plantName) => {
-    return plantName.plant_name
-      .toLowerCase()
-      .includes(searchTerm.toLocaleLowerCase());
+    if(!searchTerm && !searchPlantType){
+      return true
+    }
+    if (searchPlantType === null && !searchTerm) {
+      return plantName.plant_name
+        .toLowerCase()
+        .includes(searchTerm.toLocaleLowerCase());
+    }
+    if(searchPlantType !== null){
+      return plantName.plant_type?.includes(searchPlantType)
+    }
+
   });
 
   const handleInputChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const sortByPlant = (e) => {
     const value = e.target.value;
-    setSearchTerm(value);
+    console.log(posts)
+    setSearchPlantType(value);
+    console.log(searchPlantType, "SEARCH");
   };
 
   return (
@@ -43,6 +59,7 @@ function SearchPage({ user }) {
           <SearchByPlant
             value={searchTerm}
             handleInputChange={handleInputChange}
+            sortByPlant={sortByPlant}
           />
         </div>
       </div>
