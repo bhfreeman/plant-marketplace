@@ -39,38 +39,43 @@ const postSeed = [
   {
     plant_name: "Quaking Aspen",
     description: "quakie sapling started in a teracotta pot. Decent sized, healty root ball. No low ball, i know what i've got.",
-    image_link: "Placeholder",
-    user_id: 1,
+    image_link: "https://res.cloudinary.com/repotted/image/upload/v1620355666/bbjtcywrlhterrxd0op5.jpg",
+    user: 1,
   },
   {
     plant_name: "Rose",
+    plant_type: 'Placeholder',
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image_link: "Placeholder",
-    user_id: 2,
+    image_link: "https://res.cloudinary.com/repotted/image/upload/v1620355666/bbjtcywrlhterrxd0op5.jpg",
+    user: 2,
   },
   {
     plant_name: "Purple Kush",
+    plant_type: 'Placeholder',
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image_link: "Placeholder",
-    user_id: 3,
+    image_link: "https://res.cloudinary.com/repotted/image/upload/v1620355666/bbjtcywrlhterrxd0op5.jpg",
+    user: 3,
   },
   {
     plant_name: "Placeholder",
+    plant_type: 'Placeholder',
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image_link: "Placeholder",
-    user_id: 1,
+    image_link: "https://res.cloudinary.com/repotted/image/upload/v1620355666/bbjtcywrlhterrxd0op5.jpg",
+    user: 1,
   },
   {
     plant_name: "Placeholder",
+    plant_type: 'Placeholder',
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image_link: "Placeholder",
-    user_id: 2,
+    image_link: "https://res.cloudinary.com/repotted/image/upload/v1620355666/bbjtcywrlhterrxd0op5.jpg",
+    user: 2,
   },
   {
     plant_name: "Placeholder",
+    plant_type: 'Placeholder',
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image_link: "Placeholder",
-    user_id: 3,
+    image_link: "https://res.cloudinary.com/repotted/image/upload/v1620355666/bbjtcywrlhterrxd0op5.jpg",
+    user: 3,
   },
 ];
 
@@ -98,6 +103,13 @@ await db.Post.deleteMany({})
       console.error(err);
       process.exit(1);
     });
+}
+
+const setUserId = async () => {
+  const newUser = await db.User.findOne({name: 'Brett'})
+  const res = await db.Post.updateMany({},{user: newUser._id})
+  console.log(res.n)
+  console.log(res.nModified)
 }
 
 seedUser();
