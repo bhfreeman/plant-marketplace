@@ -26,22 +26,31 @@ function UserInfo({ userId, setPosts, setUser, user }) {
 
   return (
     //did we want the ability to update infomation on here?
-    <div>
-      <h1 style={{ fontSize: "18px" }}>Account information</h1>
-      <div className="card">
-        <div className="card-content">
-          <div className="content">
-            <h1>Name: {user.name}</h1>
-            <h1>UserName: {user.username}</h1>
-            <h1>Email: {user.email}</h1>
-            {/* <h1>Password: {}</h1> */}
-            <h1>
-              City, State: {user.city}, {user.state}
-            </h1>
+    <section className="container-flex">
+      <div className="columns">
+        <div className="column" style= {{display: "flex", flexDirection: "column", alignItems: "center"}}
+        >
+        <h1
+          className="title"
+          style={{ display: "flex",justifyContent: "center",fontSize: "25px", color: "#648c11" }}
+        >
+          Account information
+        </h1>
+        <div className="card" style={{width:"50%", margin:"5px"}}>
+          <div className="card-content">
+            <div className="content">
+              <h3>Name: {user.name}</h3>
+              <h3>Username: {user.username}</h3>
+              <h3>Email: {user.email}</h3>
+              {/* <h1>Password: {}</h1> */}
+              <h3>City: {user.city}</h3>
+              <h3>State: {user.state}</h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </section>
   );
 }
 
