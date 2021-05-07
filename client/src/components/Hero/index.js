@@ -32,7 +32,7 @@ function Hero() {
             <img src="/images/hero.jpg" alt="cactus on dark background" />
           </figure>
 
-          <div className="">
+          <div>
             <h1
               className="title"
               style={{
@@ -41,7 +41,7 @@ function Hero() {
                 color: "#f5f5f5",
                 position: "absolute",
                 top: "50%",
-                left: "30%",
+                left: "28%",
                 transform:"translate(-10px, -40px)"
               }}
             >
