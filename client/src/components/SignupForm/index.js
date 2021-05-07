@@ -47,7 +47,23 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
               setNewUser({ ...newUser, password: e.target.value })
             }
           />
-          <div>
+      <div>
+          <input
+            className="input"
+            type="text"
+            style={{ width: "18rem", marginTop:"5px", justifyContent: "space-between"}}
+            placeholder="City"
+            value={newUser.city}
+            onChange={(e) => setNewUser({ ...newUser, city: e.target.value })}
+          />
+          <div className="select">
+            <select
+              className="is-hovered"
+              style={{ maxWidth: "11rem", margin: "2px"}}
+              onChange={(e) =>
+                setNewUser({ ...newUser, state: e.target.value })
+              }
+              />
             <input
               className="input"
               type="text"
@@ -87,6 +103,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

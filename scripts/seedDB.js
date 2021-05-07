@@ -106,13 +106,9 @@ await db.Post.deleteMany({})
     });
 }
 
-const setUserId = async () => {
-  const newUser = await db.User.findOne({name: 'Brett'})
-  const res = await db.Post.updateMany({},{user: newUser._id})
-  console.log(res.n)
-  console.log(res.nModified)
+const init = async () => {
+  await seedUser();
+  await seedPost();
 }
 
-seedUser();
-seedPost();
-
+init()

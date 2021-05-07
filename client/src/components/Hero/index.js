@@ -1,8 +1,22 @@
 import React from "react";
+// import { useSpring, animated } from 'react-spring'
 
-// added a photo to hero,  added a fading effect for the text. houseplants emphasis.
-// need help with file path!
+// we are using a fading name "repotted" with spring?
 
+// function Text() {
+//   const [flip, set] = useState(false)
+//   const props = useSpring({
+//     to: { opacity: 1 },
+//     from: { opacity: 0 },
+//     reset: true,
+//     reverse: flip,
+//     delay: 200,
+//     config: config.molasses,
+//     onRest: () => set(!flip),
+//   })
+
+//   return <animated.h1 style={props}>hello</animated.h1>
+// }
 function Hero() {
   return (
     <div className="container-flex">
@@ -14,7 +28,7 @@ function Hero() {
             position:"relative" }}
         >
 
-          {/* @ToDo work on gradient. Get background image size to fit a larger monitor */}
+         
           <figure
             className="background image"
             style={{
@@ -32,7 +46,7 @@ function Hero() {
             <img src="/images/hero.jpg" alt="cactus on dark background" />
           </figure>
 
-          <div className="">
+          <div>
             <h1
               className="title"
               style={{
@@ -41,7 +55,7 @@ function Hero() {
                 color: "#f5f5f5",
                 position: "absolute",
                 top: "50%",
-                left: "30%",
+                left: "28%",
                 transform:"translate(-10px, -40px)"
               }}
             >
