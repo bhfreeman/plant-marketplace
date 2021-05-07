@@ -61,7 +61,7 @@ function CreatePostForm({ user_id }) {
             style={{
               display: "flex",
               margin: "5px",
-              rows:"5", cols:"33", width:"50%"
+              rows:"5", cols:"10", width:"50%"
             }}
             placeholder="description of plant, condition, price"
             value={postInfo.description}
