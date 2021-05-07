@@ -4,17 +4,26 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.Post.find(req.query)
+    .populate('user')
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
     db.Post.findById(req.params.id)
+    .populate('user')
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: async function(req, res) {
-    const newPost = await db.Post.create(req.body)
+    const postUser = await db.User.findById(req.body.user_id)
+    const newPost = await db.Post.create({
+      plant_name: req.body.plant_name,
+      plant_type: req.body.plant_type,
+      description: req.body.description,
+      image_link: req.body.image_link,
+      user: postUser._id
+    })
     const updateUser = await db.User.findByIdAndUpdate(req.body.user_id,{$push: {posts: newPost._id}}, {new: true})
     res.send('Post created')
     // db.Post.create(req.body)
