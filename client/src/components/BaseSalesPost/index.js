@@ -3,7 +3,7 @@ import React from "react";
 function BaseSalesPost({ plant }) {
 
   const {plant_name, description, image_link, plant_type, user} = plant;
-
+  // console.log(plant)
   const {username, email} = user[0]
 
   // console.log(username)
@@ -25,13 +25,19 @@ function BaseSalesPost({ plant }) {
     >
       <div className="card-image ">
         <figure className="image is-4by3">
-          <img src={image_link} alt="Image" />
+          <img src={image_link} alt="plant" />
         </figure>
       </div>
       <p>
         <strong>
           <em>Plant Name: </em>
           {plant_name}
+        </strong>
+      </p>
+      <p>
+        <strong>
+          <em>Plant Type: </em>
+          {plant_type}
         </strong>
       </p>
       <div

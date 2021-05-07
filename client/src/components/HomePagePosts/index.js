@@ -22,7 +22,7 @@ function HomePagePosts({ plant_name, image_link, description, email, username })
     >
       <div className="card-image ">
         <figure className="image is-4by3">
-          <img src={image_link} alt="Image" />
+          <img src={image_link} alt="plant" />
         </figure>
       </div>
       <div
