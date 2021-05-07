@@ -19,9 +19,9 @@ function SearchPage({user}) {
       return console.error(error);
     }
   };
-
   useEffect(() => {
-     getUserPosts();  
+    getUserPosts();  
+    // eslint-disable-next-line
   }, []);
 
    //search posts.plantName
@@ -35,10 +35,10 @@ function SearchPage({user}) {
     setSearchTerm(
       value
     );
-    console.log(searchTerm)
-    console.log(posts, "USERS")
+    // console.log(searchTerm)
+    // console.log(posts, "USERS")
   };
-console.log(filteredPlantName)
+// console.log(filteredPlantName)
   return (
     <div className="search-page columns"
     style={{margin:"20px 5px"}}

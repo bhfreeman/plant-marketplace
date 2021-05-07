@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { Image } from "cloudinary-react";
+import React from "react";
+// import { Image } from "cloudinary-react";
 import { openUploadWidget } from "../../utils/CloudinaryService";
 
 function UploadButton({setImage_link, userName, plantName}) {
@@ -19,7 +19,7 @@ function UploadButton({setImage_link, userName, plantName}) {
           setImage_link(photos.info.secure_url)
         }
       } else {
-        console.log(error);
+        // console.log(error);
       }
     });
   };
