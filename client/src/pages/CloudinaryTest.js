@@ -13,7 +13,7 @@ function CloudinaryTest() {
     };
     openUploadWidget(uploadOptions, (error, photos) => {
       if (!error) {
-        console.log(photos);
+        // console.log(photos);
         if (photos.event === "success") {
           setImages([...images, photos.info.public_id]);
         }

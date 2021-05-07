@@ -6,7 +6,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
   return (
     <section className="container-flex">
       <div className="columns-flex">
-        <div className="column" style={{ textAlign: "center"}}>
+        <div className="column" style={{ textAlign: "center" }}>
           <h1 style={{ fontSize: "18px" }}> Signup Form</h1>
           <input
             className="input"
@@ -39,7 +39,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
 
           <input
             className="input"
-            type="text"
+            type="password"
             style={{ width: "50%", margin: "5px" }}
             placeholder="Password"
             value={newUser.password}
@@ -47,7 +47,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
               setNewUser({ ...newUser, password: e.target.value })
             }
           />
-<div>
+      <div>
           <input
             className="input"
             type="text"
@@ -63,26 +63,47 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
               onChange={(e) =>
                 setNewUser({ ...newUser, state: e.target.value })
               }
+              />
+            <input
+              className="input"
+              type="text"
+              style={{
+                width: "20rem",
+                marginTop: "5px",
+                justifyContent: "space-between",
+              }}
+              placeholder="City"
+              value={newUser.city}
+              onChange={(e) => setNewUser({ ...newUser, city: e.target.value })}
+            />
+            <div className="select">
+              <select
+                className="is-hovered"
+                style={{ maxWidth: "11rem", margin: "2px" }}
+                onChange={(e) =>
+                  setNewUser({ ...newUser, state: e.target.value })
+                }
+              >
+                <option>State</option>
+                {states.map((state, i) => {
+                  return (
+                    <option key={i} value={state.name}>
+                      {state.name}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            <button
+              className="button"
+              style={{ background: "#8c9e5e", marginRight: ".7rem" }}
+              onClick={handleSignup}
             >
-              <option>State</option>
-              {states.map((state, i) => {
-                return (
-                  <option key={i} value={state.name}>
-                    {state.name}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
-          <button
-            className="button"
-            style={{ background: "#8c9e5e", marginRight: ".7rem"}}
-            onClick={handleSignup}
-          >
-            Sign Up
-          </button>
+              Sign Up
+            </button>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

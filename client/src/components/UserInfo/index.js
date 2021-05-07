@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import API from "../../utils/API";
 
 function UserInfo({ userId, setPosts, setUser, user }) {
@@ -21,6 +21,7 @@ function UserInfo({ userId, setPosts, setUser, user }) {
 
   useEffect(() => {
     getUserInfo();
+    // eslint-disable-next-line
   }, []);
 
   return (
