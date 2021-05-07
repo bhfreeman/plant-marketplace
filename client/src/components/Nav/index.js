@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import API from '../../utils/API'
+import API from "../../utils/API";
 // import { useStoreContext } from "../../utils/GlobalState";
 
 function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
@@ -11,15 +11,13 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
     document.querySelector(".navbar-menu").classList.toggle("is-active");
   }
 
-  async function handleLogout () {
-    try{
+  async function handleLogout() {
+    try {
       await API.logout();
-      await setUserId('');
-      await setLoggedin(false)
-      history.push('/')
-    } catch(err){
-
-    }
+      await setUserId("");
+      await setLoggedin(false);
+      history.push("/");
+    } catch (err) {}
   }
   return (
     <nav
@@ -36,7 +34,7 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
         >
           Repotted
         </Link>
-        {/* <a
+        <a
           role="button"
           className="navbar-burger burger"
           aria-label="menu"
@@ -47,7 +45,7 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a> */}
+        </a>
       </div>
       <div id="navbarBasic" className="navbar-menu">
         <div className="navbar-start">
@@ -98,12 +96,14 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
             style={{ color: "black", fontSize: "18px" }}
             className="navbar-item"
           >
-         Search
+            Search
           </Link>
         </div>
         {loggedIn && (
           <div className="navbar-end">
-            <button className="navbar-item" onClick={handleLogout}>Logout</button>
+            <button className="navbar-item" onClick={handleLogout}>
+              Logout
+            </button>
           </div>
         )}
       </div>
