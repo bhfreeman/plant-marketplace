@@ -13,12 +13,13 @@ function UserPagePosts({ posts, user }) {
           return (
             <div key={post._id}>
               <BaseSalesPost
-                key={post._id}
-                plant_name={post.plant_name}
-                description={post.description}
-                image_link={post.image_link}
-                username={user.username}
-                email={user.email}
+                plant={post}
+                // key={post._id}
+                // plant_name={post.plant_name}
+                // description={post.description}
+                // image_link={post.image_link}
+                // username={user.username}
+                // email={user.email}
               />
               <button key={"update" + post._id} className="button is-success">
                 Update Post
