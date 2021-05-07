@@ -51,7 +51,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
           <input
             className="input"
             type="text"
-            style={{ width: "16rem", marginTop:"5px", justifyContent: "space-between"}}
+            style={{ width: "20rem", marginTop:"5px", justifyContent: "space-between"}}
             placeholder="City"
             value={newUser.city}
             onChange={(e) => setNewUser({ ...newUser, city: e.target.value })}

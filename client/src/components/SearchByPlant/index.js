@@ -4,7 +4,7 @@ function SearchByPlant() {
   return (
     <section className= "container-flex">
       <div>
-      <nav role= "navigation" aria-lable= "main navigation">
+      <nav role= "navigation" aria-label= "main navigation">
         <div >
           <span className="subtitle is-5">
             <strong>Search by Plant</strong>
