@@ -19,7 +19,7 @@ function UserAccountPage({userId}) {
     <div className="user-page">
       <div className="user-info-sidebar">
         <UserInfo userId={userId} setPosts={setPosts} setUser={setUser} user={user}/>
-        <CreatePostForm userId={userId} />
+        <CreatePostForm user_id={userId} />
       </div>
       <div className="user-postings">
           <UserPagePosts posts={posts} user={user} />
