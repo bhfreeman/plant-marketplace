@@ -4,16 +4,9 @@ import UserPagePosts from '../components/UserPagePosts'
 import CreatePostForm from "../components/CreatePostForm";
 
 
-function UserAccountPage({userId}) {
+function UserAccountPage({userId, user, setUser}) {
   const [posts, setPosts] = useState([])
-  const [user, setUser] = useState({
-    name:'',
-    username:'',
-    email:'',
-    // password:'',
-    city: '',
-    state: ''
-  })
+
 
   return (
     <div className="user-page">
