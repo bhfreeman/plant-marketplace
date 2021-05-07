@@ -2,9 +2,9 @@ import React from "react";
 import BaseSalesPost from "../BaseSalesPost";
 // user can update their posts on here. Need delete and update functions.
 function UserPagePosts({ posts, user }) {
-  
+
   // @ToDo render plant_name
-  console.log(posts)
+  
   return (
     <section className="container-fluid">
       {posts
