@@ -21,10 +21,10 @@ function UserPagePosts({ posts, user }) {
                 // username={user.username}
                 // email={user.email}
               />
-              <button key={"update" + post._id} className="button is-success">
+              <button key={"update" + post._id} className="button"style ={{ background: "#8c9e5e", margin: "5px" }}>
                 Update Post
               </button>
-              <button key={"delete" + post._id} className="button is-danger">
+              <button key={"delete" + post._id} className="button"style= {{ background: "#ae0c00", margin: "5px" }}>
                 Delete Post
               </button>
             </div>
