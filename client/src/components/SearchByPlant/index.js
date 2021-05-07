@@ -4,26 +4,28 @@ function SearchByPlant({value, handleInputChange}) {
   return (
     <section className= "container-flex">
       <div>
-      <nav className="navbar" role="navigation" aria-label="main navigation">
-        <div className="navbar">
-          <span className="navbar-item">
+      <nav role= "navigation" aria-label= "main navigation">
+        <div >
+          <span className="subtitle is-5">
             <strong>Search by Plant</strong>
           </span>
-          <p className="subtitle is-5 text-center" />
           <div className="field has-addons">
             <p className="control" />
             <input className="input" type="text" 
-             style= {{ width: "90%"}}
+
+             style= {{ width: "70%"}}
             placeholder="Find a plant"
             value={value}
             onChange={handleInputChange}
             />
+
             <p className="control">
               <button className="button is-primary"
               style={{backgroundColor: "#8c9e5e",
-              color: "white", margin:"5px", borderRadius: "5px"}}
+              color: "white", margin:"2.5px", borderRadius: "5px"}}
               >Search</button>
             </p>
+          </div>
           </div>
           {/* <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">Plants</a>
@@ -39,7 +41,7 @@ function SearchByPlant({value, handleInputChange}) {
               </ul>
             </div>
           </div> */}
-          <div className="select is-dark" style={{margin: "5px"}}>
+          <div className="select is-dark">
             <select className="is-hovered" name="Plants">
               <option>Select Plant Type</option>
               <option >Flowering Plants</option>
@@ -50,7 +52,6 @@ function SearchByPlant({value, handleInputChange}) {
               <option >Trees</option>
             </select>
           </div>
-        </div>
       </nav>
       </div>
     </section>
