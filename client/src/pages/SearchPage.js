@@ -4,23 +4,17 @@ import SearchLocationForm from "../components/SearchLocationForm";
 import SearchByPlant from "../components/SearchByPlant";
 import BaseSalesPost from "../components/BaseSalesPost";
 
-function SearchPage() {
+function SearchPage({user}) {
   //state that stores user posts in order to map over BaseSalesPost
   const [posts, setPosts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [user, setUser] = useState({
-    name:'',
-    username:'',
-    email:'',
-    city: '',
-    state: ''
-  })
+ 
 
   const getUserPosts = async () => {
     try {
       let response = await API.getPosts();
-      setPosts(response.data, ...posts);
-
+     await setPosts(response.data, ...posts);
+     
     } catch (error) {
       return console.error(error);
     }
@@ -35,15 +29,16 @@ function SearchPage() {
      return plantName.plant_name.toLowerCase().includes( searchTerm.toLocaleLowerCase() )
    })
   
-console.log(user)
+
   const handleInputChange = (e) => {
     const value = e.target.value;
     setSearchTerm(
       value
     );
     console.log(searchTerm)
+    console.log(posts, "USERS")
   };
-
+console.log(filteredPlantName)
   return (
     <div className="search-page columns"
     style={{margin:"20px 5px"}}
@@ -63,7 +58,7 @@ console.log(user)
         {filteredPlantName
           .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
           .map((item) => (
-            <BaseSalesPost key={item._id} {...item} {...user}className="card  " />
+            <BaseSalesPost key={item._id} plant={item} className="card" />
           ))}
       </div>
     </div>
