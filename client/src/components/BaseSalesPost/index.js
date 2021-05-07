@@ -6,7 +6,7 @@ function BaseSalesPost({ plant }) {
   // console.log(plant)
   const {username, email} = user[0]
 
-  // console.log(username)
+  // console.log(plant)
   return (
     // flex box with margin and padding so two can fit side by side
     <div
