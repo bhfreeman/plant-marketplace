@@ -7,25 +7,42 @@ import BaseSalesPost from "../components/BaseSalesPost";
 function SearchPage() {
   //state that stores user posts in order to map over BaseSalesPost
   const [posts, setPosts] = useState([]);
-  const [users, setUsers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [user, setUser] = useState({
+    name:'',
+    username:'',
+    email:'',
+    city: '',
+    state: ''
+  })
 
   const getUserPosts = async () => {
     try {
       let response = await API.getPosts();
+      setPosts(response.data, ...posts);
 
-      return setPosts(response.data, ...posts);
     } catch (error) {
       return console.error(error);
     }
   };
 
-  // do we get users to then link to the post? Or would that be saved in the post DB?
-  const getUsers = async () => {};
-
-  console.log(posts);
   useEffect(() => {
-    getUserPosts();
+     getUserPosts();  
   }, []);
+
+   //search posts.plantName
+   const filteredPlantName = posts.filter( plantName => {
+     return plantName.plant_name.toLowerCase().includes( searchTerm.toLocaleLowerCase() )
+   })
+  
+console.log(user)
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setSearchTerm(
+      value
+    );
+    console.log(searchTerm)
+  };
 
   return (
     <div className="search-page columns"
@@ -35,19 +52,24 @@ function SearchPage() {
         {/* Separate divs so we can fit the search field and the searched-posts side by side */}
         <div className="search-input">
           <SearchLocationForm />
-          <SearchByPlant />
+          <SearchByPlant
+          value={searchTerm}
+          handleInputChange={handleInputChange}
+          />
         </div>
       </div>
 
       <div className="searched-posts column is-two-thirds is-5 is-flex is-flex-wrap-wrap is-justify-content-space-around">
-        {posts
+        {filteredPlantName
           .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
           .map((item) => (
-            <BaseSalesPost key={item._id} {...item} className="card  " />
+            <BaseSalesPost key={item._id} {...item} {...user}className="card  " />
           ))}
       </div>
     </div>
   );
 }
+
+
 
 export default SearchPage;
