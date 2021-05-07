@@ -34,7 +34,7 @@ function UserInfo({ userId, setPosts, setUser, user }) {
         >
           Account information
         </h1>
-        <div className="card">
+        <div className="card" style={{width:"50%", margin:"5px"}}>
           <div className="card-content">
             <div className="content">
               <h3>Name: {user.name}</h3>

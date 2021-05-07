@@ -25,67 +25,83 @@ function CreatePostForm({ user_id }) {
 
   return (
     <section className="container-flex">
-      <div className= "columns">
-        <div className= "column">
-      <h1 className= "title" style= {{display: "flex",justifyContent: "center",fontSize: "25px", color: "#648c11" }}>Post your plants</h1>
-      <input
-        className="input is-dark"
-        type="text"
-        style={{ width: "50%",margin:"5px" }}
-        placeholder="Plant Name"
-        value={postInfo.plant_name}
-        onChange={(e) =>
-          setPostInfo({ ...postInfo, plant_name: e.target.value })
-        }
-      />
+      <div className="columns">
+        <div className="column">
+          <h1
+            className="title"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              fontSize: "25px",
+              color: "#648c11",
+            }}
+          >
+            Post your plants
+          </h1>
+          <input
+            className="input is-dark"
+            type="text"
+            style={{ width: "50%", marginLeft: "7px" }}
+            placeholder="Plant Name"
+            value={postInfo.plant_name}
+            onChange={(e) =>
+              setPostInfo({ ...postInfo, plant_name: e.target.value })
+            }
+          />
 
-      {/* <input
+          {/* <input
         className="input is-success"
         type="text"
         style={{ width: "50%" }}
         placeholder="Common plant name"
       /> */}
 
-      <textarea
-        className="textarea is-dark"
-        style= {{ width:"50%", padding: 0, display: "flex",
-          margin:"5px", maxWidth: "300px", height: "auto",
-          maxHeight:"300px", rows:"4", cols:"50"}}
-        placeholder="description of plant, condition, price"
-        value={postInfo.description}
-        onChange={(e) =>
-          setPostInfo({ ...postInfo, description: e.target.value })
-        }
-      ></textarea>
-      <div className="select is-dark" style={{ margin: "5px" }}>
-        <select className="is-hovered" name="Plants" onChange={(e) =>
-          setPostInfo({ ...postInfo, plant_type: e.target.value })
-        } >
-          <option>Select Plant Type</option>
-          <option value="flowering" >Flowering Plants</option>
-          <option value="succulents/cacti" >Succulents and Cacti</option>
-          <option value="veggie" >Vegetables</option>
-          <option value="seeds" >Seeds</option>
-          <option value="trees" >Trees</option>
-        </select>
-      </div>
+          <textarea
+            className="textarea is-dark"
+            style={{
+              display: "flex",
+              margin: "5px",
+              rows:"5", cols:"33", width:"50%"
+            }}
+            placeholder="description of plant, condition, price"
+            value={postInfo.description}
+            onChange={(e) =>
+              setPostInfo({ ...postInfo, description: e.target.value })
+            }
+          ></textarea>
+          <div className="select is-dark" style={{ margin: "5px" }}>
+            <select
+              className="is-hovered"
+              name="Plants"
+              onChange={(e) =>
+                setPostInfo({ ...postInfo, plant_type: e.target.value })
+              }
+            >
+              <option>Select Plant Type</option>
+              <option value="flowering">Flowering Plants</option>
+              <option value="succulents/cacti">Succulents and Cacti</option>
+              <option value="veggie">Vegetables</option>
+              <option value="seeds">Seeds</option>
+              <option value="trees">Trees</option>
+            </select>
+          </div>
 
-      {/* <input
+          {/* <input
         className="input is-success"
         type="text"
         style={{ width: "50%" }}
         placeholder="your email address"
       /> */}
-      <UploadButton setImage_link={setImage_link} />
+          <UploadButton setImage_link={setImage_link} />
 
-      <button
-        className="button"
-        style={{background: "#8c9e5e", margin: "5px" }}
-        onClick={handleFormSubmit}
-      >
-        Submit
-      </button>
-      </div>
+          <button
+            className="button"
+            style={{ background: "#8c9e5e", margin: "5px" }}
+            onClick={handleFormSubmit}
+          >
+            Submit
+          </button>
+        </div>
       </div>
     </section>
   );
