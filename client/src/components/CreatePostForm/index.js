@@ -24,11 +24,11 @@ const history = useHistory();
 
   return (
     <section className="container-flex">
-      <h1>Post your plants</h1>
+      <h1 className= "title" style= {{display: "flex",justifyContent: "center",fontSize: "25px", color: "#648c11" }}>Post your plants</h1>
       <input
-        className="input is-success"
+        className="input is-dark"
         type="text"
-        style={{ width: "50%" }}
+        style={{ width: "50%",margin:"5px" }}
         placeholder="Plant Name"
         value={postInfo.plant_name}
         onChange={e => setPostInfo({...postInfo, plant_name: e.target.value})}
@@ -42,8 +42,8 @@ const history = useHistory();
       /> */}
 
       <textarea
-        className="textarea"
-        // style= {{ width: "50%"}}
+        className="textarea is-dark"
+        style= {{ width: "40%", margin:"5px"}}
         placeholder="description of plant, condition, price"
         value={postInfo.description}
         onChange={e => setPostInfo({...postInfo, description: e.target.value})}
@@ -57,15 +57,9 @@ const history = useHistory();
       /> */}
       <UploadButton setImage_link={setImage_link} />
 
-      {/* <input
-        className="input is-success"
-        type="text"
-        style={{ width: "50%" }}
-        placeholder="upload your photos of the plant"
-      /> */}
       <button
-        className="button is-success"
-        style={{ }}
+        className="button"
+        style={{background: "#8c9e5e", margin: "5px" }}
         onClick={handleFormSubmit}
       >
         Submit

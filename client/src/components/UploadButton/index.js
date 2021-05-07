@@ -24,7 +24,7 @@ function UploadButton({setImage_link, userName, plantName}) {
     });
   };
   return(
-  <button className="button is-success" onClick={() => beginUpload(`${userName}_${plantName}`)}>Upload Image</button>);
+  <button className="button" style ={{background: "#8c9e5e", margin: "5px"}} onClick={() => beginUpload(`${userName}_${plantName}`)}>Upload Image</button>);
 }
 
 export default UploadButton;
