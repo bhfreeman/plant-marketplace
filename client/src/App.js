@@ -18,6 +18,15 @@ function App() {
   const [loggedIn, setLoggedIn] = useStickyState(false, 'loggedIn')
   const [userId, setUserId] = useStickyState('', 'userId')
 
+  const [user, setUser] = useState({
+    name:'',
+    username:'',
+    email:'',
+    // password:'',
+    city: '',
+    state: ''
+  })
+
   return (
     <StoreProvider>
       <CloudinaryContext cloudName="repotted">
@@ -32,9 +41,12 @@ function App() {
             />
             <Switch>
               <Route exact path="/" component={LandingPg} />
-              <Route exact path="/search" component={SearchPage} />
+              <Route exact path="/search" >
+                <SearchPage user={user}/>
+                </Route>
+            
               <Route exact path="/account-page">
-                <UserAccountPage userId={userId} />
+                <UserAccountPage userId={userId} user={user}setUser={setUser} />
               </Route>
               <Route exact path="/login-signup">
                 <Login
