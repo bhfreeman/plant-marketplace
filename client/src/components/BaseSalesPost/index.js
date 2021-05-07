@@ -1,7 +1,6 @@
 import React from "react";
 // this would be used for the landing page- a sample of what can be done...
 function BaseSalesPost({ plant }) {
-  const { plant_name, description, image_link, plant_type, user } = plant;
 
   const {plant_name, description, image_link, plant_type, user} = plant;
   console.log(plant)
