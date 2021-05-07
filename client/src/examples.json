@@ -4,27 +4,31 @@
         "plant_name": "Aloe",
         "image_link": "/images/examples/aloe.jpg",
         "description": "A well cared for Aloe succulent. Will look amazing on any window sill!",
-        "contact_email": "YouHadMeAtAloe@email.com"
+        "email": "YouHadMeAtAloe@email.com",
+        "username": "YouHadMeAtAloe"
     },
     {
         "id": 2,
         "plant_name": "Bonsai",
         "image_link": "/images/examples/bonsai.jpg",
         "description": "This Beautiful Bonsai is looking for a good home. Needs to have EXTRA care to help keep it healthy. Let me know if that person is YOU!",
-        "contact_email": "beautyandthebonsai@email.com"
+        "email": "beautyandthebonsai@email.com",
+        "username": "beauty and the bonsai"
     },
     {
         "id": 3,
         "plant_name": "Crassula Succulent",
         "image_link": "/images/examples/crassula-succulent.jpg",
         "description": "Grown outdoors, needs forever home indoors. Contact if interested.",
-        "contact_email": "plantersdelight@email.com"
+        "email": "plantersdelight@email.com",
+        "username": "plantersdelight"
     },
     {
         "id": 4,
         "plant_name": "Cactus",
         "image_link": "/images/examples/cute-cactus.jpg",
         "description": "Having trouble taking care for needy house plants? This cactus doesn't need much attention!",
-        "contact_email": "theCactiguy@email.com"
+        "email": "theCactiguy@email.com",
+        "username": "The Cacti Guy"
     }
 ]

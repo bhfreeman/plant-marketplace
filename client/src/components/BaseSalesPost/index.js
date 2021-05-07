@@ -1,6 +1,6 @@
 import React from "react";
 // this would be used for the landing page- a sample of what can be done...
-function BaseSalesPost({plant}) {
+function BaseSalesPost({ plant }) {
 
   const {plant_name, description, image_link, plant_type, user} = plant;
   // console.log(plant)
@@ -14,7 +14,7 @@ function BaseSalesPost({plant}) {
     is-flex-direction-column"
       // className={styles.cardContent}
       style={{
-        maxWidth: "250px",
+        width: "250px",
         minHeight: "300px",
         marginBottom: "2em",
         border: "black 1px dashed",
@@ -62,7 +62,10 @@ function BaseSalesPost({plant}) {
           }}
         ></div>
       </div>
-      <a href={email}>Contact Seller {username}</a>
+      <p>
+        Contact Seller:
+        <a href={`mailto:${email}`}> {username}</a>
+      </p>
     </div>
   );
 }

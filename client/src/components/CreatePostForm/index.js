@@ -55,7 +55,6 @@ function CreatePostForm({ user_id }) {
         style={{ width: "50%" }}
         placeholder="Common plant name"
       /> */}
-
           <textarea
             className="textarea is-dark"
             style={{
@@ -86,6 +85,7 @@ function CreatePostForm({ user_id }) {
               <option value="trees">Trees</option>
             </select>
           </div>
+
 
           {/* <input
         className="input is-success"
