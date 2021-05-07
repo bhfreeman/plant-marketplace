@@ -37,7 +37,7 @@ function SearchByPlant({ value, handleInputChange, sortByPlant }) {
           </div>
           <div className="select is-dark">
             <select className="is-hovered" name="Plants" onChange={sortByPlant}>
-              <option value={null} >
+              <option value="all" >
                 Select Plant Type
               </option>
               <option value="flowering">Flowering Plants</option>
