@@ -47,39 +47,41 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
               setNewUser({ ...newUser, password: e.target.value })
             }
           />
-      <div>
-          <input
+          <div>
+            {/* <input
             className="input"
             type="text"
             style={{ width: "18rem", marginTop:"5px", justifyContent: "space-between"}}
             placeholder="City"
             value={newUser.city}
             onChange={(e) => setNewUser({ ...newUser, city: e.target.value })}
-          />
-          <div className="select">
-            <select
+          /> */}
+
+            {/* <select
               className="is-hovered"
               style={{ maxWidth: "11rem", margin: "2px"}}
               onChange={(e) =>
                 setNewUser({ ...newUser, state: e.target.value })
               }
-              />
+              /> */}
             <input
               className="input"
               type="text"
               style={{
-                width: "20rem",
+                width: "24rem",
                 marginTop: "5px",
+                marginLeft: "7px",
                 justifyContent: "space-between",
               }}
               placeholder="City"
               value={newUser.city}
               onChange={(e) => setNewUser({ ...newUser, city: e.target.value })}
             />
+
             <div className="select">
               <select
                 className="is-hovered"
-                style={{ maxWidth: "11rem", margin: "2px" }}
+                style={{ maxWidth: "11rem", margin: "3px" }}
                 onChange={(e) =>
                   setNewUser({ ...newUser, state: e.target.value })
                 }
@@ -96,14 +98,13 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
             </div>
             <button
               className="button"
-              style={{ background: "#8c9e5e", marginRight: ".7rem" }}
+              style={{ background: "#8c9e5e", margin: "5px", marginRight: ".9rem" }}
               onClick={handleSignup}
             >
               Sign Up
             </button>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );

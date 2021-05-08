@@ -6,7 +6,7 @@ function BaseSalesPost({ plant }) {
   // console.log(plant)
   const {username, email} = user[0]
 
-  // console.log(username)
+  // console.log(plant)
   return (
     // flex box with margin and padding so two can fit side by side
     <div
@@ -14,6 +14,7 @@ function BaseSalesPost({ plant }) {
     is-flex-direction-column"
       // className={styles.cardContent}
       style={{
+        background: "#f5f5f5", 
         width: "250px",
         minHeight: "300px",
         marginBottom: "2em",

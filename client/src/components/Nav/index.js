@@ -27,6 +27,7 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
       aria-label="main navigation"
     >
       <div className="navbar-brand">
+        <img src="./images/logo.png" alt= "logo of hands holding a potted plant"style= {{width:40, height: 45}}></img>
         <Link
           to="/"
           style={{ fontSize: "30px", color: "black" }}
@@ -84,13 +85,7 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
           style={{ color: "black" , fontSize: "18px" }}onClick={toggleBurgerMenu}>
           Signup
           </Link> */}
-          <Link
-            to="/contact"
-            style={{ color: "black", fontSize: "18px" }}
-            className="navbar-item"
-          >
-            Search
-          </Link>
+          
         </div>
         {loggedIn && (
           <div className="navbar-end">

@@ -29,7 +29,7 @@ function Login({ setUserId, setLoggedIn}) {
       // console.log(apicall)
       await setUserId(apicall.data.user.id)
       await setLoggedIn(true)
-      history.push('/account-page')
+      history.push('/')
 
     } catch(err) {
       alert(err)
@@ -46,7 +46,7 @@ function Login({ setUserId, setLoggedIn}) {
         city: newUser.city,
         state: newUser.state
       })
-      history.push('/login-signup')
+      history.push('/')
     } catch(err) {
       alert(err)
     }
