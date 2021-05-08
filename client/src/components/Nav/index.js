@@ -27,6 +27,7 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
       aria-label="main navigation"
     >
       <div className="navbar-brand">
+        <img src="./images/logo.png" alt= "logo of hands holding a potted plant"style= {{width:40, height: 45}}></img>
         <Link
           to="/"
           style={{ fontSize: "30px", color: "black" }}
