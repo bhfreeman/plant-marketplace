@@ -68,8 +68,9 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
               className="input"
               type="text"
               style={{
-                width: "26.5rem",
+                width: "26rem",
                 marginTop: "5px",
+                marginLeft: "7px",
                 justifyContent: "space-between",
               }}
               placeholder="City"
