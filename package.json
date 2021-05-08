@@ -8,8 +8,8 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "seedDB":"node scripts/seedDB.js",
-    "seedSetUser":"node scripts/setUserId.js",
+    "seedDB": "node scripts/seedDB.js",
+    "seedSetUser": "node scripts/setUserId.js",
     "seed": "npm run seedDB && npm run seedSetUser",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
@@ -29,6 +29,8 @@
     "express": "^4.16.3",
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.3.16"
+    "mongoose": "^5.3.16",
+    "react-animation": "^1.2.2",
+    "react-reveal": "^1.2.2"
   }
 }

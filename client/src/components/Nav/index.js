@@ -50,14 +50,7 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
       </div>
       <div id="navbarBasic" className="navbar-menu">
         <div className="navbar-start">
-          <Link
-            to="/about"
-            className="navbar-item"
-            style={{ color: "black", fontSize: "18px" }}
-            onClick={toggleBurgerMenu}
-          >
-            About
-          </Link>
+          
           <Link
             to="/search"
             className="navbar-item"
