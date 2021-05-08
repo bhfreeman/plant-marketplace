@@ -68,7 +68,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
               className="input"
               type="text"
               style={{
-                width: "26rem",
+                width: "24rem",
                 marginTop: "5px",
                 marginLeft: "7px",
                 justifyContent: "space-between",
