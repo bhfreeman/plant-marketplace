@@ -26,7 +26,7 @@ function CreatePostForm({ user_id }) {
   return (
     <section className="container-flex">
       <div className="columns">
-        <div className="column">
+        <div className="column" style={{ textAlign: "center", width: "50%",  justifyContent: "center",}}>
           <h1
             className="title"
             style={{
@@ -48,20 +48,17 @@ function CreatePostForm({ user_id }) {
               setPostInfo({ ...postInfo, plant_name: e.target.value })
             }
           />
-
+      
           {/* <input
         className="input is-success"
         type="text"
         style={{ width: "50%" }}
         placeholder="Common plant name"
       /> */}
-          <textarea
-            className="textarea is-dark"
-            style={{
-             display: "flex",
-              margin: "7px",
-              rows: "5",
-              cols: "10",
+      <div className="column" style={{  width: "50%", flexDirection: "column", marginLeft:"auto", marginRight:"auto"}}>
+          <textarea 
+            className= "textarea is-dark" 
+            style={{  justifyContent: "center", textAlign: "center",
             }}
             placeholder="description of plant, condition, price"
             value={postInfo.description}
@@ -69,6 +66,7 @@ function CreatePostForm({ user_id }) {
               setPostInfo({ ...postInfo, description: e.target.value })
             }
           ></textarea>
+          </div>
           <div className="select is-dark" style={{ margin: "5px" }}>
             <select
               className="is-hovered"
@@ -103,7 +101,7 @@ function CreatePostForm({ user_id }) {
             Submit
           </button>
         </div>
-      </div>
+        </div>
     </section>
   );
 }
