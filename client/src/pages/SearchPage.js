@@ -3,6 +3,7 @@ import API from "../utils/API";
 import SearchLocationForm from "../components/SearchLocationForm";
 import SearchByPlant from "../components/SearchByPlant";
 import BaseSalesPost from "../components/BaseSalesPost";
+import background from "../images/background.png"; 
 
 function SearchPage({ user }) {
   //state that stores user posts in order to map over BaseSalesPost
@@ -49,6 +50,7 @@ function SearchPage({ user }) {
   };
 
   return (
+    <div className= "background" style={{backgroundImage: `url(${background})` }}>
     <div className="search-page columns" style={{ margin: "20px 5px" }}>
       <div className="search-field column is-one-third">
         {/* Separate divs so we can fit the search field and the searched-posts side by side */}
@@ -69,6 +71,7 @@ function SearchPage({ user }) {
             <BaseSalesPost key={item._id} plant={item} className="card" />
           ))}
       </div>
+    </div>
     </div>
   );
 }

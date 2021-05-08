@@ -92,13 +92,7 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
           style={{ color: "black" , fontSize: "18px" }}onClick={toggleBurgerMenu}>
           Signup
           </Link> */}
-          <Link
-            to="/contact"
-            style={{ color: "black", fontSize: "18px" }}
-            className="navbar-item"
-          >
-            Search
-          </Link>
+          
         </div>
         {loggedIn && (
           <div className="navbar-end">
