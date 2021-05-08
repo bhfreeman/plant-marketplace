@@ -1,22 +1,25 @@
 import React from "react";
+import { animations, easings } from 'react-animation'
+import 'react-animation/dist/keyframes.css'
+import Fade from 'react-reveal/Fade';
 // import { useSpring, animated } from 'react-spring'
 
 // we are using a fading name "repotted" with spring?
 
-// function Text() {
-//   const [flip, set] = useState(false)
-//   const props = useSpring({
-//     to: { opacity: 1 },
-//     from: { opacity: 0 },
-//     reset: true,
-//     reverse: flip,
-//     delay: 200,
-//     config: config.molasses,
-//     onRest: () => set(!flip),
-//   })
 
-//   return <animated.h1 style={props}>hello</animated.h1>
-// }
+  // const [flip, set] = useState(false)
+  // const props = useSpring({
+  //   to: { opacity: 1 },
+  //   from: { opacity: 0 },
+  //   reset: true,
+  //   reverse: flip,
+  //   delay: 200,
+  //   config: config.molasses,
+  //   onRest: () => set(!flip),
+  // })
+
+ 
+
 function Hero() {
   return (
     <div className="container-flex">
@@ -50,6 +53,7 @@ function Hero() {
             <h1
               className="title"
               style={{
+                animation: `pop-in ${easings.easeOutExpo}4000ms forwards`,       
                 textAlign: "center",
                 fontSize: "55px",
                 color: "#f5f5f5",
@@ -58,9 +62,11 @@ function Hero() {
                 left: "28%",
                 transform:"translate(-10px, -40px)"
               }}
+              
             >
               Repotted
             </h1>
+            <Fade bottom>
             <h2
               className="subtitle"
               style={{
@@ -73,6 +79,7 @@ function Hero() {
             >
               Welcome to a plant marketplace
             </h2>
+            </Fade>
           </div>
         </div>
       </section>
