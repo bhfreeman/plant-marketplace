@@ -89,7 +89,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
                 <option>State</option>
                 {states.map((state, i) => {
                   return (
-                    <option key={i} value={state.name}>
+                    <option key={i} value={state.abbreviation}>
                       {state.name}
                     </option>
                   );
