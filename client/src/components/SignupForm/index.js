@@ -52,8 +52,8 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
               className="input"
               type="text"
               style={{
-                width: "30%",  
-                marginLeft: "9px",
+                width: "29%",  
+                marginLeft: "9px", marginRight:" 3px",
                 justifyContent: "space-between",
 
               }}
@@ -65,7 +65,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
             <div className="select">
               <select
                 className="is-hovered"
-                style={{ maxWidth: "11rem", margin: "3px" }}
+                style={{ maxWidth: "11rem", margin: "4px" }}
                 onChange={(e) =>
                   setNewUser({ ...newUser, state: e.target.value })
                 }
@@ -82,7 +82,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
             </div>
             <button
               className="button"
-              style={{ background: "#8c9e5e", margin: "5px", marginRight: ".9rem" }}
+              style={{ background: "#8c9e5e", margin: "3px", marginRight: "1rem" }}
               onClick={handleSignup}
             >
               Sign Up
