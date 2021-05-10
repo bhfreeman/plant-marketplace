@@ -2,22 +2,6 @@ import React from "react";
 import { animations, easings } from 'react-animation'
 import 'react-animation/dist/keyframes.css'
 import Fade from 'react-reveal/Fade';
-// import { useSpring, animated } from 'react-spring'
-
-// we are using a fading name "repotted" with spring?
-
-
-  // const [flip, set] = useState(false)
-  // const props = useSpring({
-  //   to: { opacity: 1 },
-  //   from: { opacity: 0 },
-  //   reset: true,
-  //   reverse: flip,
-  //   delay: 200,
-  //   config: config.molasses,
-  //   onRest: () => set(!flip),
-  // })
-
  
 
 function Hero() {
@@ -88,7 +72,3 @@ function Hero() {
 }
 
 export default Hero;
-
-// style={{minHeight: "200px",
-//     height: "60vw",
-//     maxHeight: "500px"}}
