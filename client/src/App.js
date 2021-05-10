@@ -32,7 +32,6 @@ function App() {
       <CloudinaryContext cloudName="repotted">
         <Router>
           <div>
-            <p>Logged IN: {loggedIn}. userId: {userId}</p>
             <Nav 
             loggedIn={loggedIn} 
             setLoggedin={setLoggedIn} 

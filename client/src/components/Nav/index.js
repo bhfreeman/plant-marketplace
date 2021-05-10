@@ -89,7 +89,7 @@ function Nav({ loggedIn, setLoggedin, userId, setUserId }) {
         </div>
         {loggedIn && (
           <div className="navbar-end">
-            <button className="navbar-item" onClick={handleLogout}>
+            <button className="navbar-item button" onClick={handleLogout} style={{ background: "#8c9e5e", margin: "3px", marginRight: "1rem", marginTop: ".5rem" }}>
               Logout
             </button>
           </div>
