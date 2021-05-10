@@ -14,6 +14,7 @@ function BaseSalesPost({ plant }) {
     is-flex-direction-column"
       // className={styles.cardContent}
       style={{
+        background: "#f5f5f5", 
         width: "250px",
         minHeight: "300px",
         marginBottom: "2em",

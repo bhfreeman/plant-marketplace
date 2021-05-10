@@ -47,30 +47,15 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
               setNewUser({ ...newUser, password: e.target.value })
             }
           />
-          <div>
-            {/* <input
-            className="input"
-            type="text"
-            style={{ width: "18rem", marginTop:"5px", justifyContent: "space-between"}}
-            placeholder="City"
-            value={newUser.city}
-            onChange={(e) => setNewUser({ ...newUser, city: e.target.value })}
-          /> */}
-
-            {/* <select
-              className="is-hovered"
-              style={{ maxWidth: "11rem", margin: "2px"}}
-              onChange={(e) =>
-                setNewUser({ ...newUser, state: e.target.value })
-              }
-              /> */}
+          <div className= "column">
             <input
               className="input"
               type="text"
               style={{
-                width: "20rem",
-                marginTop: "5px",
+                width: "29%",  
+                marginLeft: "9px", marginRight:" 3px",
                 justifyContent: "space-between",
+
               }}
               placeholder="City"
               value={newUser.city}
@@ -80,7 +65,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
             <div className="select">
               <select
                 className="is-hovered"
-                style={{ maxWidth: "11rem", margin: "2px" }}
+                style={{ maxWidth: "11rem", margin: "4px" }}
                 onChange={(e) =>
                   setNewUser({ ...newUser, state: e.target.value })
                 }
@@ -97,7 +82,7 @@ function SignUpForm({ newUser, setNewUser, handleSignup }) {
             </div>
             <button
               className="button"
-              style={{ background: "#8c9e5e", marginRight: ".7rem" }}
+              style={{ background: "#8c9e5e", margin: "3px", marginRight: "1rem" }}
               onClick={handleSignup}
             >
               Sign Up

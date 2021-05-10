@@ -14,7 +14,7 @@ As an evergreen enthusiast, I want to be able to purchase plants from local sell
 
 
 ## Usage  
-As a first time visitor, you are given the option to login or browse the plant marketplace. If browsing and not signed in, you will be able to view all relevant information on the plant however you will not have the option to purchase. If signed in, users can then look into their account settings where they can view their own personal information as well as create a posting to sell a plant of theirs. If choosing to sell, they will enter the type of plant and a suggested selling price as well as an option to upload an image. Once created, the post will show the plant type, image (if provided), sellers username, the ability to purchase/contact the seller, and the area the seller is located. Users will also be able to ‘favorite’ sellers posts. 
+As a first time visitor, you are given the option to login or browse the plant marketplace. If browsing and not signed in, you will be able to view all relevant information on the plant however you will not have the option to purchase. If signed in, users can then look into their account settings where they can view their own personal information as well as create a posting to sell a plant of theirs. If choosing to sell, they will enter the type of plant and a suggested selling price as well as an option to upload an image. Once created, the post will show the plant type, image (if provided), sellers username, the ability to purchase/contact the seller, and the area the seller is located. 
 
 
 ## Layouts
@@ -24,7 +24,7 @@ As a first time visitor, you are given the option to login or browse the plant m
 - Brett
      -database
 - Kyle
-     -routes
+     -routes 
 - Emily
     -components
 
@@ -47,3 +47,10 @@ Using Github projects
 ## Dataflow  
 
 ![data-flow](client/src/images/data-flow.png)
+
+## Stills of Website
+
+![plant-marketplace](client/src/images/screen1.png)
+![plant-marketplace](client/src/images/screen2.png)
+
+## Link to deployed Website
