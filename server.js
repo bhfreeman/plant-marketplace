@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3001;
 
 // Connect to the Mongo DB
 // MongoDB database name is repotteddb
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/repotteddb");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/repotteddb", {useNewUrlParser: true});
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

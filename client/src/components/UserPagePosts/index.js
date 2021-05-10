@@ -1,8 +1,27 @@
 import React from "react";
+import {useHistory} from 'react-router-dom'
 import BaseSalesPost from "../BaseSalesPost";
+import API from '../../utils/API'
 // user can update their posts on here. Need delete and update functions.
 function UserPagePosts({ posts, user }) {
+  const history = useHistory();
+  // const [updatedPost, setUpdatedPost] = useState({
+  //   plant_name: "",
+  //   description: "",
+  //   image_link: '', 
+  //   plant_type: '',
+  // })
+  // function openUpdateForm(){
 
+  // }
+
+  // function handleUpdate(){
+
+  // }
+  async function handleDelete(post_id){
+    await API.deletePost(post_id)
+    history.push('/')
+  }
   // @ToDo render plant_name
   
   return (
@@ -14,67 +33,17 @@ function UserPagePosts({ posts, user }) {
             <div key={post._id}>
               <BaseSalesPost
                 plant={post}
-                // key={post._id}
-                // plant_name={post.plant_name}
-                // description={post.description}
-                // image_link={post.image_link}
-                // username={user.username}
-                // email={user.email}
               />
-              <button key={"update" + post._id} className="button"style ={{ background: "#8c9e5e", margin: "5px" }}>
+              {/* <button key={"update" + post._id} className="button"style ={{ background: "#8c9e5e", margin: "5px" }}>
                 Update Post
-              </button>
-              <button key={"delete" + post._id} className="button"style= {{ background: "#ae0c00", margin: "5px" }}>
+              </button> */}
+              <button key={"delete" + post._id} className="button"style= {{ background: "#ae0c00", margin: "5px" }} onClick={() => handleDelete(post._id)}>
                 Delete Post
               </button>
             </div>
           );
         })}
-      {/* <p className="title" style={{}}>
-        {" "}
-        Update your posts{" "}
-      </p>
-      <div className="columns">
-        <div className="column" style={{}}>
-          <div className="card" style={{}}>
-            <div className="card-image">
-              <img className="image" src={img} alt={title} />
-            </div>
-            <div className="media-content">
-              <p className="title is-4">
-                {title}
-                <input
-                  className="input is-primary"
-                  type="text"
-                  placeholder="Update Title"
-                />
-              </p>
-              <p className="subtitle is-6">
-                {plant}
-         
-                <input
-                  className="input is-primary"
-                  type="text"
-                  placeholder="Update Plant Name"
-                />
-              </p>
-              <textarea
-                className="textarea"
-                placeholder="description update"
-                rows="10"
-              >
-                {description}
-              </textarea>
-            </div>
-            <div className="content">
-              <p className="is-size-6">{content}</p>
-              <a href={email}>Contact email</a>
-            </div> */}
-      {/* <button className="button is-success">Update</button>
-            <button className="button is-danger">Delete ALL</button> */}
-      {/* </div>
-        </div>
-      </div> */}
+
     </section>
   );
 }

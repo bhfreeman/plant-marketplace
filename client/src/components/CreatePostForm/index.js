@@ -20,7 +20,7 @@ function CreatePostForm({ user_id }) {
       image_link,
       user_id,
     });
-    history.push("/account-page");
+    history.push("/search");
   }
 
   return (

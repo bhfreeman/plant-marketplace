@@ -54,5 +54,5 @@ Using Github projects
 ![plant-marketplace](client/src/images/screen2.png)
 
 ## Link to deployed Website
+[heroku-deployment](https://repotted.herokuapp.com/)
 
-https://repotted.herokuapp.com/

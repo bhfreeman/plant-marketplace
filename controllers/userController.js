@@ -11,7 +11,12 @@ module.exports = {
 // Add a new user
   create: async function (req, res) {
     try {
-      const newUser = new db.User(req.body);
+      const inputCity = req.body.city.toLowerCase();
+      const citySpaced = inputCity.split(' ')
+      const outputCity = citySpaced.map((word) => {
+        return word[0].toUpperCase() + word.substring(1)
+      }).join(" ")
+      const newUser = new db.User({...req.body, city: outputCity});
       newUser.save((err) => {
         if (err) return handleError(err);
       });
