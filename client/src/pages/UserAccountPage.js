@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import UserInfo from "../components/UserInfo";
 import UserPagePosts from '../components/UserPagePosts'
 import CreatePostForm from "../components/CreatePostForm";
+import NoPostDisplay from '../components/NoPostDisplay'
 
 
 function UserAccountPage({userId, user, setUser}) {
@@ -15,7 +16,19 @@ function UserAccountPage({userId, user, setUser}) {
         <CreatePostForm user_id={userId} />
       </div>
       <div className="user-postings">
-          <UserPagePosts posts={posts} user={user} />
+      <h1
+            className="title"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              fontSize: "25px",
+              color: "#648c11",
+            }}
+          >
+            Your Plants
+          </h1>
+        {posts.length > 0 && <UserPagePosts posts={posts} user={user} /> }
+        {posts.length === 0 && <NoPostDisplay />}
       </div>
     </div>
   );
